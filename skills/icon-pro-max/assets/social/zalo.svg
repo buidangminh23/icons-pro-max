@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"><rect data-tile="1" x="0" y="0" width="48" height="48" rx="6.72" fill="#ffffff"/>
   <rect width="48" height="48" rx="10" fill="#0068FF"/>
   <text x="24" y="30.5" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="auto" letter-spacing="-0.5">Zalo</text>
 </svg>

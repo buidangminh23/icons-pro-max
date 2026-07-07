@@ -78,7 +78,7 @@ const Logo = ({ src, alt, h }: { src: string; alt: string; h: number }) => (
 - The badge is a fixed **24px (`h-6`)** chip; the logo height is the per-logo value above — never equalize heights, the values are tuned so every mark reads at the same optical size.
 - Always `width: auto` — **never set both width and height** (distorts the mark). Aspect ratio is sacred.
 - `loading="eager"` + `decoding="sync"`: payment trust marks must not pop in late.
-- The white `bg-white` is required — these logos assume a light backing; do not drop them onto a dark or tinted surface bare.
+- The white `bg-white` is required — these logos assume a light backing; do not drop them onto a dark or tinted surface bare. (The bundled `assets/payment/*.svg` copies carry a white rounded tile so they preview correctly on dark backdrops like the README; the web renders them via the badge wrapper instead.)
 - Import the component; do not hand-roll `<img src="/payment/…">` at call sites.
 
 ---
@@ -146,7 +146,7 @@ export const GmailIcon = ({ className }: { className?: string }) => (
 
 **Rules**
 - **All six live in `src/SocialIcons.tsx` — import from there.** Do **not** paste a fresh definition into a page. (Historically `ZaloIcon` and `GmailIcon` were copy-pasted into `ContactSection`, `BlogApp`, and `PortfolioApp`; that was consolidated — keep it consolidated. See §7 Anti-Slop #5.)
-- `currentColor` marks: set color on the parent (`text-neutral-600 hover:text-neutral-900`); size only via `className` (`h-5 w-5`). Never bake a fill color into these four **web components** — the web keeps them `currentColor`. (The bundled `assets/social/*.svg` files carry a brand-color default only so they preview correctly as standalone images, e.g. in the README.)
+- `currentColor` marks: set color on the parent (`text-neutral-600 hover:text-neutral-900`); size only via `className` (`h-5 w-5`). Never bake a fill color into these four **web components** — the web keeps them `currentColor`. (The bundled `assets/social/*.svg` files carry a brand-color default and a white rounded tile so they preview correctly as standalone images — dark marks like GitHub stay visible on dark backdrops, e.g. in the README.)
 - Zalo `/assets/zalo-logo.svg` is the contact/social source; keep it distinct from the payment `zalo.svg`.
 - Gmail is multicolor and immutable — never recolor it to match a theme; mark `aria-hidden` when a visible "Email" label sits beside it.
 - Each link needs an accessible name: a visible label, or `aria-label` on the anchor.
