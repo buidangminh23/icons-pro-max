@@ -147,7 +147,7 @@ export const GmailIcon = ({ className }: { className?: string }) => (
 
 **Rules**
 - **All six live in `src/SocialIcons.tsx` — import from there.** Do **not** paste a fresh definition into a page. (Historically `ZaloIcon` and `GmailIcon` were copy-pasted into `ContactSection`, `BlogApp`, and `PortfolioApp`; that was consolidated — keep it consolidated. See §7 Anti-Slop #5.)
-- `currentColor` marks: set color on the parent (`text-neutral-600 hover:text-neutral-900`); size only via `className` (`h-5 w-5`). Never bake a fill color into these four.
+- `currentColor` marks: set color on the parent (`text-neutral-600 hover:text-neutral-900`); size only via `className` (`h-5 w-5`). Never bake a fill color into these four **web components** — the web keeps them `currentColor`. (The bundled `assets/social/*.svg` files carry a brand-color default only so they preview correctly as standalone images, e.g. in the README.)
 - Zalo `/assets/zalo-logo.svg` is the contact/social source; keep it distinct from the payment `zalo.svg`.
 - Gmail is multicolor and immutable — never recolor it to match a theme; mark `aria-hidden` when a visible "Email" label sits beside it.
 - Each link needs an accessible name: a visible label, or `aria-label` on the anchor.
