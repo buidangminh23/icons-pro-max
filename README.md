@@ -4,7 +4,7 @@
 
 ### The Complete Icon System for the Personal Web
 
-*One catalog for every icon on [example.com](https://example.com) — payment marks, QR, social/app brand icons, the lucide UI set, tech-stack logos, and site favicons. Exact paths, components, sizes, brand colors, render recipes, and an anti-slop checklist.*
+*One catalog for every icon on the Personal Web — payment marks, QR, social/app brand icons, the lucide UI set, and tech-stack logos. Exact paths, components, sizes, brand colors, render recipes, and an anti-slop checklist.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-0078D4?style=for-the-badge)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent-Skills-E53935?style=for-the-badge)](https://github.com/buidangminh23/icon-pro-max)
@@ -123,7 +123,7 @@ git clone https://github.com/buidangminh23/icon-pro-max.git
 
 ## The complete icon catalog
 
-Six groups. Every mark below is a **real asset bundled in this repo**
+Five groups. Every mark below is a **real asset bundled in this repo**
 ([`skills/icon-pro-max/assets/`](skills/icon-pro-max/assets/)) and documented in
 [`SKILL.md`](skills/icon-pro-max/SKILL.md) with its path, component, size, brand
 color, and render recipe.
@@ -229,27 +229,6 @@ In the web, GitHub/LinkedIn/Facebook/Telegram render as `currentColor` inline SV
 </table>
 </div>
 
-### 🏷️ Site & brand icons — 9
-
-<div align="center">
-<table>
-<tr>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/brand/favicon-32.png" alt="Favicon 32" height="40"><br><sub>Favicon 32</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/brand/apple-touch-icon.png" alt="Apple touch" height="48"><br><sub>Apple touch</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/brand/icon-192.png" alt="PWA 192" height="48"><br><sub>PWA 192</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/brand/icon-512.png" alt="PWA 512" height="48"><br><sub>PWA 512</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/brand/me-avatar.png" alt="Avatar" height="48"><br><sub>Avatar</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/brand/bimi-logo.svg" alt="BIMI" height="48"><br><sub>BIMI</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/brand/institution_logo.svg" alt="Institution" height="40"><br><sub>Institution</sub></td>
-</tr>
-</table>
-
-<img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/brand/og-image.jpg" alt="OG image (1200×630)" width="360"><br><sub>OG share image · 1200×630</sub>
-
-</div>
-
-Plus `favicon.ico` (classic tab icon). Changing the brand mark means regenerating the **whole set** so tabs, installs, and shares stay consistent.
-
 ### 🎛️ UI icons — lucide-react (~70 in use)
 
 Generic action/status glyphs — the only freely-restylable icons (`currentColor`, sized by class). These come from the [lucide-react](https://lucide.dev) package (no bundled files). Reuse one before importing a new name:
@@ -264,15 +243,14 @@ Generic action/status glyphs — the only freely-restylable icons (`currentColor
 
 - **§0 Pick the right group** — brand → its exact logo; concept → a lucide glyph.
 - **§1 Payment** — the badge wrapper, per-logo heights, aspect-ratio rules.
-- **§2 QR** — static images and the dynamic VietQR `qrUrl()` recipe.
+- **§2 QR** — the dynamic VietQR `qrUrl()` recipe.
 - **§3 Social & app** — `currentColor` vs brand-color marks, single-source rule.
 - **§4 UI (lucide)** — usage, the full in-use icon set, a11y.
 - **§5 Tech logos** — 50 brand-colored SVGs, no recoloring.
-- **§6 Site & brand** — favicons/app icons/OG, regenerate-as-a-set.
-- **§7 Anti-slop checklist** — 10 tells (re-drawn logo, recolored mark, distorted ratio, wrong-meaning glyph, re-inlined duplicate…) each with the fix.
-- **§8 Add-an-icon procedure** — classify → drop asset → wire render → update catalog → a11y → verify.
+- **§6 Anti-slop checklist** — 9 tells (re-drawn logo, recolored mark, distorted ratio, wrong-meaning glyph, re-inlined duplicate…) each with the fix.
+- **§7 Add-an-icon procedure** — classify → drop asset → wire render → update catalog → a11y → verify.
 
-All brand assets are mirrored, self-contained, under
+All bundled marks are mirrored, self-contained, under
 [`skills/icon-pro-max/assets/`](skills/icon-pro-max/assets/) so the catalog works
 outside the web repo.
 

@@ -1,9 +1,9 @@
 ---
 name: icon-pro-max
 description: >
-  The single source of truth for every icon on the Personal Web (example.com):
+  The single source of truth for every icon on the Personal Web:
   payment methods, QR codes, social/app brand marks, the lucide-react UI icon
-  set, 50 tech-stack logos, and site/brand favicons. Gives the exact asset path,
+  set, and 50 tech-stack logos. Gives the exact asset path,
   React component, canonical size, brand color, render recipe, and accessibility
   rule for each icon — plus an anti-slop checklist so an agent never redraws a
   logo, recolors a brand mark, distorts an aspect ratio, or re-inlines a
@@ -24,7 +24,7 @@ description: >
 
 Asset roots:
 - **In the web app:** `public/…` (served at `/…`) and inline React components in `src/`.
-- **In this skill:** `assets/{payment,qr,social,tech,brand}/` — a self-contained mirror so the catalog is usable outside the repo.
+- **In this skill:** `assets/{payment,social,tech}/` — a self-contained mirror so the catalog is usable outside the repo.
 
 ---
 
@@ -37,7 +37,6 @@ Asset roots:
 | A link to a social / contact account | **Social & App** | §3 | `currentColor` inline SVG (or brand SVG for Zalo/Gmail) |
 | A generic action / status glyph (close, download, check…) | **UI (lucide)** | §4 | `lucide-react`, `currentColor`, sized by class |
 | A technology / tool logo (portfolio) | **Tech stack** | §5 | Brand-colored SVG file |
-| A favicon / app icon / OG image | **Site & Brand** | §6 | Fixed asset, wired in `<head>` / manifest |
 
 **Decision rule:** a *brand* (company, product, payment network) → its exact logo asset (§1/§3/§5/§6). A *concept* (save, delete, warning) → a lucide glyph (§4). Never substitute one for the other (a lucide `credit-card` is not the Visa logo).
 
@@ -191,30 +190,7 @@ import { Download, Check, X } from "lucide-react";
 
 ---
 
-## 6. SITE & BRAND ICONS
-
-Favicons, app icons, and share images — wired into `<head>` / `site.webmanifest`, not placed ad-hoc.
-
-| Asset | Web path | Skill asset | Role |
-|-------|----------|-------------|------|
-| Favicon (ICO) | `/favicon.ico` | `assets/brand/favicon.ico` | classic tab icon |
-| Favicon 32 | `/favicon-32.png` | `assets/brand/favicon-32.png` | 32×32 PNG |
-| Apple touch | `/apple-touch-icon.png` | `assets/brand/apple-touch-icon.png` | iOS home-screen |
-| PWA 192 | `/icon-192.png` | `assets/brand/icon-192.png` | manifest icon |
-| PWA 512 | `/icon-512.png` | `assets/brand/icon-512.png` | manifest / splash |
-| BIMI | `/bimi-logo.svg` | `assets/brand/bimi-logo.svg` | verified email logo (SVG Tiny PS) |
-| Avatar | `/me-avatar.png` | `assets/brand/me-avatar.png` | profile portrait |
-| OG image | `/og-image.jpg` | `assets/brand/og-image.jpg` | social share preview (1200×630) |
-| Institution | `institution_logo.svg` (repo root) | `assets/brand/institution_logo.svg` | institution logo |
-
-**Rules**
-- Changing the brand mark means regenerating **the whole set** (ico + 32 + 180 apple + 192 + 512 + og) so tabs, installs, and shares stay consistent — never update one in isolation.
-- BIMI must stay valid **SVG Tiny Portable/Secure** (no scripts, no external refs) or email clients reject it.
-- OG image is 1200×630; keep that ratio or link previews crop badly.
-
----
-
-## 7. ANTI-SLOP CHECKLIST — Fix On Sight
+## 6. ANTI-SLOP CHECKLIST — Fix On Sight
 
 The meta-rule: **an icon references something real. Preserve its identity; reuse its one source.**
 
@@ -228,12 +204,11 @@ The meta-rule: **an icon references something real. Preserve its identity; reuse
 | 6 | **Payment mark on a bare dark/tinted surface** | logos assume light backing | keep the white badge wrapper |
 | 7 | **Hardcoded VietQR / bank QR image** | amount-specific, goes stale | generate via `qrUrl()`; bank data from `PAY` |
 | 8 | **Icon-only control with no accessible name** | fails a11y | `aria-label` on the button; brand `<img>` gets real `alt` |
-| 9 | **New favicon without regenerating the set** | mismatched tab vs install vs share | regenerate ico/32/apple/192/512/og together |
-| 10 | **New icon added, catalog not updated** | this file goes stale, next agent re-inlines | add the asset *and* the row here in one change |
+| 9 | **New icon added, catalog not updated** | this file goes stale, next agent re-inlines | add the asset *and* the row here in one change |
 
 ---
 
-## 8. ADD-AN-ICON PROCEDURE
+## 7. ADD-AN-ICON PROCEDURE
 
 1. **Classify** — brand or concept? Which group (§0)?
 2. **Concept (lucide)** — reuse a name from §4.B if one fits; otherwise import the new lucide name and add it to §4.B.
