@@ -186,6 +186,7 @@ import { Download, Check, X } from "lucide-react";
 - Reference by path (`/portfolio/assets/tech/python.svg`); do not paste the SVG source inline.
 - These carry their own brand colors — do **not** apply `currentColor` or a `fill` override.
 - Keep the aspect ratio; size the container, let `object-fit: contain` do the rest.
+- A few near-black marks (`apple`, `vercel`, `github`, `gradle`, `express`, `bash`, `batchfile`) carry a white rounded tile in their **bundled** copy so they stay visible on dark backdrops (e.g. the README). The web's `public/portfolio/assets/tech/` copies stay pristine — render those on light surfaces.
 - `github` appears here (tech context) *and* as a `currentColor` social mark in §3 — pick by context: a stack chip → tech SVG; a "follow me" link → `GitHubIcon`.
 
 ---
