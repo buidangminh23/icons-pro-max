@@ -134,10 +134,10 @@ color, and render recipe.
 <table>
 <tr>
 <td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/payment/vietqr.svg" alt="VietQR" height="26"><br><sub>VietQR</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/payment/vnpay.svg" alt="VNPAY" height="26"><br><sub>VNPAY</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/payment/vnpay.svg" alt="VNPAY" height="34"><br><sub>VNPAY</sub></td>
 <td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/payment/zalopay.svg" alt="ZaloPay" height="26"><br><sub>ZaloPay</sub></td>
 <td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/payment/momo.svg" alt="MoMo" height="26"><br><sub>MoMo</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/payment/visa.svg" alt="Visa" height="26"><br><sub>Visa</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/payment/visa.svg" alt="Visa" height="34"><br><sub>Visa</sub></td>
 <td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icon-pro-max/main/skills/icon-pro-max/assets/payment/mastercard.svg" alt="Mastercard" height="26"><br><sub>Mastercard</sub></td>
 </tr>
 </table>
