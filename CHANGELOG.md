@@ -4,6 +4,12 @@ All notable changes to Icon Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [1.1.0] - 2026-07-14
+
+### Added
+- **Download & store badges** — App Store, Google Play, macOS (custom Finder icon), and Windows (custom Windows 11 icon) badges.
+- Visual gallery showcase in `README.md` and catalog entries in `SKILL.md`.
+
 ## [1.0.0] - 2026-07-07
 
 ### Added

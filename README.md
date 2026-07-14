@@ -123,7 +123,7 @@ git clone https://github.com/buidangminh23/icons-pro-max.git
 
 ## The complete icon catalog
 
-Five groups. Every mark below is a **real asset bundled in this repo**
+Six groups. Every mark below is a **real asset bundled in this repo**
 ([`skills/icons-pro-max/assets/`](skills/icons-pro-max/assets/)) and documented in
 [`SKILL.md`](skills/icons-pro-max/SKILL.md) with its path, component, size, brand
 color, and render recipe.
@@ -229,6 +229,19 @@ In the web, GitHub/LinkedIn/Facebook/Telegram render as `currentColor` inline SV
 </table>
 </div>
 
+### 📱 Download & store badges — 4
+
+<div align="center">
+<table>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/badge/appstore.svg" alt="App Store" height="40"><br><sub>App Store</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/badge/googleplay.svg" alt="Google Play" height="40"><br><sub>Google Play</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/badge/macos.svg" alt="macOS" height="40"><br><sub>macOS</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/badge/windows.svg" alt="Windows" height="40"><br><sub>Windows</sub></td>
+</tr>
+</table>
+</div>
+
 ### 🎛️ UI icons — lucide-react (~70 in use)
 
 Generic action/status glyphs — the only freely-restylable icons (`currentColor`, sized by class). These come from the [lucide-react](https://lucide.dev) package (no bundled files). Reuse one before importing a new name:
@@ -239,7 +252,7 @@ Generic action/status glyphs — the only freely-restylable icons (`currentColor
 
 ## What's inside the skill
 
-[`SKILL.md`](skills/icons-pro-max/SKILL.md) — 8 sections:
+[`SKILL.md`](skills/icons-pro-max/SKILL.md) — 9 sections:
 
 - **§0 Pick the right group** — brand → its exact logo; concept → a lucide glyph.
 - **§1 Payment** — the badge wrapper, per-logo heights, aspect-ratio rules.
@@ -247,8 +260,9 @@ Generic action/status glyphs — the only freely-restylable icons (`currentColor
 - **§3 Social & app** — `currentColor` vs brand-color marks, single-source rule.
 - **§4 UI (lucide)** — usage, the full in-use icon set, a11y.
 - **§5 Tech logos** — 50 brand-colored SVGs, no recoloring.
-- **§6 Anti-slop checklist** — 9 tells (re-drawn logo, recolored mark, distorted ratio, wrong-meaning glyph, re-inlined duplicate…) each with the fix.
-- **§7 Add-an-icon procedure** — classify → drop asset → wire render → update catalog → a11y → verify.
+- **§6 Download badges** — 4 brand-colored SVG badges on black background.
+- **§7 Anti-slop checklist** — 9 tells (re-drawn logo, recolored mark, distorted ratio, wrong-meaning glyph, re-inlined duplicate…) each with the fix.
+- **§8 Add-an-icon procedure** — classify → drop asset → wire render → update catalog → a11y → verify.
 
 All bundled marks are mirrored, self-contained, under
 [`skills/icons-pro-max/assets/`](skills/icons-pro-max/assets/) so the catalog works

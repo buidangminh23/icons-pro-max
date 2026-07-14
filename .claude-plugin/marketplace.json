@@ -9,7 +9,7 @@
     {
       "name": "icons-pro-max",
       "description": "The complete icon system for the Personal Web — one catalog for payment methods, QR codes, social/app brand marks, the lucide-react UI set, and tech-stack logos, with exact paths, components, sizes, brand colors, render recipes, and an anti-slop checklist",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "source": "./",
       "author": {
         "name": "buidangminh23",

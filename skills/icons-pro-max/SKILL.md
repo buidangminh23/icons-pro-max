@@ -2,8 +2,8 @@
 name: icons-pro-max
 description: >
   The single source of truth for every icon on the Personal Web:
-  payment methods, QR codes, social/app brand marks, the lucide-react UI icon
-  set, and 50 tech-stack logos. Gives the exact asset path,
+  payment methods, QR codes, social/app brand marks, download badges, the
+  lucide-react UI icon set, and 50 tech-stack logos. Gives the exact asset path,
   React component, canonical size, brand color, render recipe, and accessibility
   rule for each icon — plus an anti-slop checklist so an agent never redraws a
   logo, recolors a brand mark, distorts an aspect ratio, or re-inlines a
@@ -24,7 +24,7 @@ description: >
 
 Asset roots:
 - **In the web app:** `public/…` (served at `/…`) and inline React components in `src/`.
-- **In this skill:** `assets/{payment,social,tech}/` — a self-contained mirror so the catalog is usable outside the repo.
+- **In this skill:** `assets/{payment,social,tech,badge}/` — a self-contained mirror so the catalog is usable outside the repo.
 
 ---
 
@@ -37,8 +37,9 @@ Asset roots:
 | A link to a social / contact account | **Social & App** | §3 | `currentColor` inline SVG (or brand SVG for Zalo/Gmail) |
 | A generic action / status glyph (close, download, check…) | **UI (lucide)** | §4 | `lucide-react`, `currentColor`, sized by class |
 | A technology / tool logo (portfolio) | **Tech stack** | §5 | Brand-colored SVG file |
+| An app store or OS download badge | **Download badges** | §6 | Brand-colored SVG badge, black background |
 
-**Decision rule:** a *brand* (company, product, payment network) → its exact logo asset (§1/§3/§5/§6). A *concept* (save, delete, warning) → a lucide glyph (§4). Never substitute one for the other (a lucide `credit-card` is not the Visa logo).
+**Decision rule:** a *brand* (company, product, payment network) → its exact logo asset (§1/§3/§5/§6/§7). A *concept* (save, delete, warning) → a lucide glyph (§4). Never substitute one for the other (a lucide `credit-card` is not the Visa logo).
 
 ---
 
@@ -191,7 +192,27 @@ import { Download, Check, X } from "lucide-react";
 
 ---
 
-## 6. ANTI-SLOP CHECKLIST — Fix On Sight
+## 6. DOWNLOAD BADGES
+
+App Store, Google Play, macOS, and Windows download badges. Rendered on a black background, with rounded corners and high contrast, these badges are used to direct users to application download links.
+
+### 6.A Catalog
+
+| Badge | Web asset | Skill asset | Aspect Ratio | Text / Notes |
+|-------|-----------|-------------|:------------:|--------------|
+| App Store | `/badge/appstore.svg` | `assets/badge/appstore.svg` | **3.0:1** | Download on the App Store |
+| Google Play | `/badge/googleplay.svg` | `assets/badge/googleplay.svg` | **3.38:1** | GET IT ON Google Play |
+| macOS | `/badge/macos.svg` | `assets/badge/macos.svg` | **3.0:1** | Download cho macOS (Finder icon) |
+| Windows | `/badge/windows.svg` | `assets/badge/windows.svg` | **3.0:1** | Download cho Windows (Windows 11 icon) |
+
+**Rules**
+- Maintain the original aspect ratio (always set only height or use `object-fit: contain`).
+- Render at a standard height (typically **40px**).
+- Do not invert or modify the brand icons or colors in the badges.
+
+---
+
+## 7. ANTI-SLOP CHECKLIST — Fix On Sight
 
 The meta-rule: **an icon references something real. Preserve its identity; reuse its one source.**
 
@@ -200,7 +221,7 @@ The meta-rule: **an icon references something real. Preserve its identity; reuse
 | 1 | A **re-drawn / re-traced** logo (pasted path that "looks close") | breaks brand identity; legal risk | use the exact asset from this catalog |
 | 2 | A **recolored brand mark** (Gmail forced monochrome, tech logo tinted) | falsifies the brand | brand icons keep their colors; only lucide + the four `currentColor` social marks restyle |
 | 3 | **Width + height both set** on a payment/tech logo | distorts aspect ratio | set one dimension, `width:auto` / `object-fit:contain` |
-| 4 | A **lucide glyph standing in for a brand** (lucide `credit-card` as "Visa") | wrong meaning | brands → §1/§3/§5 assets; concepts → §4 |
+| 4 | A **lucide glyph standing in for a brand** (lucide `credit-card` as "Visa") | wrong meaning | brands → §1/§3/§5/§6 assets; concepts → §4 |
 | 5 | **Re-inlined duplicate** of a shared icon in a page | drift across copies; the ZaloIcon/GmailIcon trap | import from `src/SocialIcons.tsx` (social) / `src/PaymentLogos.tsx` (payment) |
 | 6 | **Payment mark on a bare dark/tinted surface** | logos assume light backing | keep the white badge wrapper |
 | 7 | **Hardcoded VietQR / bank QR image** | amount-specific, goes stale | generate via `qrUrl()`; bank data from `PAY` |
@@ -209,11 +230,11 @@ The meta-rule: **an icon references something real. Preserve its identity; reuse
 
 ---
 
-## 7. ADD-AN-ICON PROCEDURE
+## 8. ADD-AN-ICON PROCEDURE
 
 1. **Classify** — brand or concept? Which group (§0)?
 2. **Concept (lucide)** — reuse a name from §4.B if one fits; otherwise import the new lucide name and add it to §4.B.
-3. **Brand** — drop the official asset into the right folder (`public/payment|portfolio/assets/tech` + this skill's `assets/…`), keep native colors, respect aspect ratio.
+3. **Brand** — drop the official asset into the right folder (`public/payment|portfolio|badge/assets/tech` + this skill's `assets/…`), keep native colors, respect aspect ratio.
 4. **Wire the render** — payment → add a `…Logo` to `PaymentLogos.tsx` with a tuned height; social/app → add to `SocialIcons.tsx`; never inline at the call site.
 5. **Update this catalog** — add the row (path, component, size, color) in the matching section.
 6. **A11y** — give it an accessible name; mark decorative marks `aria-hidden` when a text label is present.
