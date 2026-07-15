@@ -11,7 +11,7 @@ description: >
   anywhere in the site.
 ---
 
-# Icon Pro Max — The Complete Icon System
+# Icons Pro Max — The Complete Icon System
 
 > Every icon the site ships, in one catalog. Before you place, swap, or invent an
 > icon: find it here first. If it exists, **reuse the canonical component / asset
@@ -38,7 +38,7 @@ Asset roots:
 | A generic action / status glyph (close, download, check…) | **UI (lucide)** | §4 | `lucide-react`, `currentColor`, sized by class |
 | A technology / tool logo (portfolio) | **Tech stack** | §5 | Brand-colored SVG file |
 
-**Decision rule:** a *brand* (company, product, payment network) → its exact logo asset (§1/§3/§5/§6). A *concept* (save, delete, warning) → a lucide glyph (§4). Never substitute one for the other (a lucide `credit-card` is not the Visa logo).
+**Decision rule:** a *brand* (company, product, payment network) → its exact logo asset (§1/§3/§5). A *concept* (save, delete, warning) → a lucide glyph (§4). Never substitute one for the other (a lucide `credit-card` is not the Visa logo).
 
 ---
 
@@ -145,7 +145,7 @@ export const GmailIcon = ({ className }: { className?: string }) => (
 ```
 
 **Rules**
-- **All six live in `src/SocialIcons.tsx` — import from there.** Do **not** paste a fresh definition into a page. (Historically `ZaloIcon` and `GmailIcon` were copy-pasted into `ContactSection`, `BlogApp`, and `PortfolioApp`; that was consolidated — keep it consolidated. See §7 Anti-Slop #5.)
+- **All six live in `src/SocialIcons.tsx` — import from there.** Do **not** paste a fresh definition into a page. (Historically `ZaloIcon` and `GmailIcon` were copy-pasted into `ContactSection`, `BlogApp`, and `PortfolioApp`; that was consolidated — keep it consolidated. See §6 Anti-Slop #5.)
 - `currentColor` marks: set color on the parent (`text-neutral-600 hover:text-neutral-900`); size only via `className` (`h-5 w-5`). Never bake a fill color into these four **web components** — the web keeps them `currentColor`. (The bundled `assets/social/*.svg` files carry a brand-color default and a white rounded tile so they preview correctly as standalone images — dark marks like GitHub stay visible on dark backdrops, e.g. in the README.)
 - Zalo `/assets/zalo-logo.svg` is the contact/social source; keep it distinct from the payment `zalo.svg`.
 - Gmail is multicolor and immutable — never recolor it to match a theme; mark `aria-hidden` when a visible "Email" label sits beside it.
