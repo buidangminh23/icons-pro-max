@@ -11,7 +11,7 @@ description: >
   anywhere in the site.
 ---
 
-# Icon Pro Max — The Complete Icon System
+# Icons Pro Max — The Complete Icon System
 
 > Every icon the site ships, in one catalog. Before you place, swap, or invent an
 > icon: find it here first. If it exists, **reuse the canonical component / asset
@@ -39,7 +39,7 @@ Asset roots:
 | A technology / tool logo (portfolio) | **Tech stack** | §5 | Brand-colored SVG file |
 | An app store or OS download badge | **Download badges** | §6 | Brand-colored SVG badge, black background |
 
-**Decision rule:** a *brand* (company, product, payment network) → its exact logo asset (§1/§3/§5/§6/§7). A *concept* (save, delete, warning) → a lucide glyph (§4). Never substitute one for the other (a lucide `credit-card` is not the Visa logo).
+**Decision rule:** a *brand* (company, product, payment network) → its exact logo asset (§1/§3/§5/§6). A *concept* (save, delete, warning) → a lucide glyph (§4). Never substitute one for the other (a lucide `credit-card` is not the Visa logo).
 
 ---
 

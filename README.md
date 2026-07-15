@@ -123,8 +123,11 @@ git clone https://github.com/buidangminh23/icons-pro-max.git
 
 ## The complete icon catalog
 
-Six groups. Every mark below is a **real asset bundled in this repo**
-([`skills/icons-pro-max/assets/`](skills/icons-pro-max/assets/)) and documented in
+Five galleries below — the sixth group, **QR**, is recipe-only (SKILL.md §2) and
+bundles no marks. Every payment, social, tech, and badge mark shown is a **real
+asset bundled in this repo**
+([`skills/icons-pro-max/assets/`](skills/icons-pro-max/assets/)); the UI set comes
+from the [lucide-react](https://lucide.dev) package. Each icon is documented in
 [`SKILL.md`](skills/icons-pro-max/SKILL.md) with its path, component, size, brand
 color, and render recipe.
 
