@@ -20,6 +20,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
     but update the URL and vendored path to `icons-pro-max`.
   - Update any prompts or agent configs that reference the old skill name.
 
+## [1.1.0] - 2026-07-14
+
+### Added
+- **Download & store badges** — App Store, Google Play, macOS (custom Finder icon), and Windows (custom Windows 11 icon) badges.
+- Visual gallery showcase in `README.md` and catalog entries in `SKILL.md`.
+
 ## [1.0.0] - 2026-07-07
 
 ### Added
