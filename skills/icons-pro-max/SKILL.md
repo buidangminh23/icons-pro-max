@@ -203,12 +203,15 @@ App Store, Google Play, macOS, and Windows download badges. Rendered on a black 
 | App Store | `/badge/appstore.svg` | `assets/badge/appstore.svg` | **3.0:1** | Download on the App Store |
 | Google Play | `/badge/googleplay.svg` | `assets/badge/googleplay.svg` | **3.38:1** | GET IT ON Google Play |
 | macOS | `/badge/macos.svg` | `assets/badge/macos.svg` | **3.0:1** | Tải cho macOS (Finder icon) |
+| App Store · tiếng Việt | `/badge/appstore-vi.svg` | `assets/badge/appstore-vi.svg` | **3.0:1** | Tải về trên App Store — bản Apple phát hành cho vi-VN |
+| Google Play · tiếng Việt | `/badge/googleplay-vi.png` | `assets/badge/googleplay-vi.png` | **3.365:1** | TẢI TRÊN Google Play — bản Google phát hành cho vi, đã cắt viền trong suốt |
 | Windows | `/badge/windows.svg` | `assets/badge/windows.svg` | **3.0:1** | Tải cho Windows (Windows 11 icon) |
 
 **Rules**
 - Maintain the original aspect ratio (always set only height or use `object-fit: contain`).
 - Render at a standard height (typically **40px**).
 - Do not invert or modify the brand icons or colors in the badges.
+- Never translate a vendor badge by editing its text. Apple and Google publish their own localized artwork — use `appstore-vi.svg` / `googleplay-vi.png` for Vietnamese pages. The Windows and macOS badges are house-built, so their wording is ours to set.
 
 ---
 
