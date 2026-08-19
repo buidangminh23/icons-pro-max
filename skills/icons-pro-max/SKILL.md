@@ -202,8 +202,8 @@ App Store, Google Play, macOS, and Windows download badges. Rendered on a black 
 |-------|-----------|-------------|:------------:|--------------|
 | App Store | `/badge/appstore.svg` | `assets/badge/appstore.svg` | **3.0:1** | Download on the App Store |
 | Google Play | `/badge/googleplay.svg` | `assets/badge/googleplay.svg` | **3.38:1** | GET IT ON Google Play |
-| macOS | `/badge/macos.svg` | `assets/badge/macos.svg` | **3.0:1** | Download cho macOS (Finder icon) |
-| Windows | `/badge/windows.svg` | `assets/badge/windows.svg` | **3.0:1** | Download cho Windows (Windows 11 icon) |
+| macOS | `/badge/macos.svg` | `assets/badge/macos.svg` | **3.0:1** | Tải cho macOS (Finder icon) |
+| Windows | `/badge/windows.svg` | `assets/badge/windows.svg` | **3.0:1** | Tải cho Windows (Windows 11 icon) |
 
 **Rules**
 - Maintain the original aspect ratio (always set only height or use `object-fit: contain`).
