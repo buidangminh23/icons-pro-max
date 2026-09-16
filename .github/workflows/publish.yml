@@ -1,0 +1,60 @@
+name: Publish
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    uses: ./.github/workflows/ci.yml
+
+  release:
+    needs: validate
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Validate tag and build packages
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          git merge-base --is-ancestor HEAD origin/main
+          node scripts/release.mjs build "$TAG"
+      - name: Publish complete release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          if gh release view "$TAG" --json isDraft > "$RUNNER_TEMP/release.json" 2>/dev/null; then
+            if [ "$(jq -r .isDraft "$RUNNER_TEMP/release.json")" = "false" ]; then
+              mkdir "$RUNNER_TEMP/published"
+              gh release download "$TAG" --dir "$RUNNER_TEMP/published"
+              cmp dist/SHA256SUMS "$RUNNER_TEMP/published/SHA256SUMS"
+              (cd "$RUNNER_TEMP/published" && sha256sum --check SHA256SUMS)
+              echo "$TAG is already published and verified"
+              exit 0
+            fi
+          else
+            gh release create "$TAG" --verify-tag --draft --title "$TAG" --notes-file dist/release-notes.md
+          fi
+          gh release upload "$TAG" dist/*.zip dist/*.tar.gz dist/SHA256SUMS --clobber
+          mkdir "$RUNNER_TEMP/verify"
+          gh release download "$TAG" --dir "$RUNNER_TEMP/verify"
+          cmp dist/SHA256SUMS "$RUNNER_TEMP/verify/SHA256SUMS"
+          (cd "$RUNNER_TEMP/verify" && sha256sum --check SHA256SUMS)
+          gh release edit "$TAG" --draft=false --notes-file dist/release-notes.md

@@ -33,6 +33,12 @@ never redraw or recolor a brand mark. The one rule:
 
 ## Install
 
+Download a complete, versioned bundle from [GitHub Releases](https://github.com/buidangminh23/icons-pro-max/releases/latest):
+ZIP or TAR.GZ, including the catalog, all assets, and plugin manifests. Verify it
+against the attached `SHA256SUMS` before extracting. Each archive has a single
+`icons-pro-max-X.Y.Z/` root; preserve its hidden manifest directories when copying.
+See [release and verification instructions](CONTRIBUTING.md#release-rules).
+
 Pick your tool. Every block has a **copy button** (hover its top-right corner).
 
 #### `npx` · skills
