@@ -67,7 +67,7 @@ function build(tag) {
   const sums = [];
   for (const format of ['zip', 'tar.gz']) {
     const name = `icons-pro-max-${version}.${format}`;
-    git('archive', `--format=${format}`, `--prefix=icons-pro-max-${version}/`, `--output=${path.join(output, name)}`, 'HEAD', '--', ...payload);
+    git('-c', 'core.autocrlf=false', 'archive', `--format=${format}`, `--prefix=icons-pro-max-${version}/`, `--output=${path.join(output, name)}`, 'HEAD', '--', ...payload);
     const hash = createHash('sha256').update(readFileSync(path.join(output, name))).digest('hex');
     sums.push(`${hash}  ${name}`);
   }
