@@ -1,0 +1,14 @@
+{
+  "name": "icons-pro-max",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/release.mjs check",
+    "version": "node scripts/release.mjs sync && git add .claude-plugin/plugin.json .claude-plugin/marketplace.json .codex-plugin/plugin.json gemini-extension.json",
+    "release:notes": "node scripts/release.mjs notes",
+    "release:build": "node scripts/release.mjs build"
+  }
+}

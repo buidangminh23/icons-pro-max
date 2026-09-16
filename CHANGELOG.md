@@ -4,6 +4,23 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [2.1.0] - 2026-09-16
+
+### Added
+- Vendor-published Vietnamese App Store and Google Play badges, alongside the
+  existing English variants.
+- Versioned ZIP and TAR.GZ release packages containing the complete icon catalog,
+  bundled assets, plugin manifests, README, changelog, and license, with SHA-256 checksums.
+- Automated GitHub Releases from curated changelog entries after validation on
+  Windows, macOS, and Linux with Node.js 22 and 24.
+- Contributor release rules, synchronized manifest versions, tag checks, and
+  regression tests for the release gates.
+
+### Changed
+- Windows and macOS download badges now use Vietnamese labels.
+- Release publication verifies uploaded packages before making a draft public;
+  reruns verify existing published packages without replacing them.
+
 ## [2.0.0] - 2026-07-15
 
 ### Changed
