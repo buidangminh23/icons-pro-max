@@ -4,12 +4,6 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
-## [Unreleased]
-
-### Fixed
-- Declare the license as `MIT` instead of `SEE LICENSE IN LICENSE`, so npm and
-  the GitHub API report the license that the bundled LICENSE file already grants.
-
 ## [2.1.1] - 2026-09-17
 
 ### Added

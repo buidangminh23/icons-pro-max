@@ -15,7 +15,7 @@
     "check:package": "npm pack --dry-run --json | node scripts/check-package.mjs"
   },
   "description": "Complete icon catalog, bundled assets, and spacing-aware rendering guidance for AI coding agents",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/buidangminh23/icons-pro-max",
   "repository": {
     "type": "git",
