@@ -22,6 +22,14 @@ Available on npm and GitHub Releases.
 
 ---
 
+## Release notifications
+
+To receive new release notifications, open [this repository](https://github.com/buidangminh23/icons-pro-max), select **Watch → Custom → Releases**, then click **Apply**. Choose GitHub or email delivery in your [notification settings](https://github.com/settings/notifications).
+
+Starring the repository or downloading/installing a package does not subscribe you to release notifications. Notifications do not update your installed copy; follow the installation instructions to update.
+
+[View release notes](https://github.com/buidangminh23/icons-pro-max/releases).
+
 ## Why
 
 Icons are where AI-generated UI leaks: a re-traced logo that's *almost* right, a
