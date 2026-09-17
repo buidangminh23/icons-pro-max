@@ -39,6 +39,20 @@ never redraw or recolor a brand mark. The one rule:
 ---
 
 ## Install
+#### GitHub Packages
+
+A repository-linked copy is available as `@buidangminh23/icons-pro-max` on
+[GitHub Packages](https://github.com/buidangminh23/icons-pro-max/packages).
+The npmjs.com package remains `@minhspark/icons-pro-max`.
+GitHub's npm registry requires authentication with a classic token with
+`read:packages` even for public packages. Authenticate locally, never commit a token:
+
+```bash
+npm login --scope=@buidangminh23 --registry=https://npm.pkg.github.com --auth-type=legacy
+npm install @buidangminh23/icons-pro-max --registry=https://npm.pkg.github.com
+```
+
+This downloads the bundle; use the agent-specific instructions below to register it.
 
 #### npm package
 
