@@ -1,0 +1,69 @@
+{
+  "id": "iconpromax",
+  "industry": "design",
+  "type": "myskills",
+  "vi": {
+    "nameA": "Icons Pro",
+    "nameB": "Max",
+    "tagline": "Complete Icon System",
+    "desc": "Nguồn chân lý duy nhất cho mọi icon trên web — phương thức thanh toán, QR, logo mạng xã hội/app, bộ icon UI lucide, 50 logo công nghệ và badge tải app. Mỗi icon có sẵn đường dẫn, component, kích thước, màu thương hiệu và cách render, kèm checklist chống lỗi để không bao giờ vẽ lại hay đổi màu logo gốc.",
+    "stats": [
+      {
+        "value": "6",
+        "label": "Thanh toán"
+      },
+      {
+        "value": "50",
+        "label": "Logo công nghệ"
+      },
+      {
+        "value": "68",
+        "label": "Icon UI"
+      },
+      {
+        "value": "6",
+        "label": "Social/App"
+      },
+      {
+        "value": "6",
+        "label": "Badge tải app"
+      },
+      {
+        "value": "MIT",
+        "label": "Giấy phép"
+      }
+    ]
+  },
+  "en": {
+    "nameA": "Icons Pro",
+    "nameB": "Max",
+    "tagline": "Complete Icon System",
+    "desc": "The single source of truth for every icon on the site — payment methods, QR, social/app brand marks, the lucide UI set, 50 tech-stack logos, and store badges. Each icon ships with its path, component, size, brand color, and render recipe, plus an anti-slop checklist so a brand logo is never redrawn or recolored.",
+    "stats": [
+      {
+        "value": "6",
+        "label": "Payment"
+      },
+      {
+        "value": "50",
+        "label": "Tech logos"
+      },
+      {
+        "value": "68",
+        "label": "UI icons"
+      },
+      {
+        "value": "6",
+        "label": "Social/App"
+      },
+      {
+        "value": "6",
+        "label": "Store badges"
+      },
+      {
+        "value": "MIT",
+        "label": "License"
+      }
+    ]
+  }
+}
