@@ -6,10 +6,17 @@
 
 *One catalog for every icon on the Personal Web — payment marks, QR, social/app brand icons, the lucide UI set, and tech-stack logos. Exact paths, components, sizes, brand colors, render recipes, and an anti-slop checklist.*
 
+[![CI](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml/badge.svg)](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml)
+[![GitHub Release](https://img.shields.io/github/v/release/buidangminh23/icons-pro-max?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max/releases/latest)
+[![npm skills CLI](https://img.shields.io/npm/v/skills?style=for-the-badge&label=npm%20skills%20CLI)](https://www.npmjs.com/package/skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0078D4?style=for-the-badge)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent-Skills-E53935?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Plugin-FFB300?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max)
 [![Works with](https://img.shields.io/badge/Works_with-Claude_·_Cursor_·_Codex_·_Gemini-43A047?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max)
+
+[Latest release](https://github.com/buidangminh23/icons-pro-max/releases/latest) · [CI](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml) · [npm installer (skills CLI)](https://www.npmjs.com/package/skills)
+
+Distributed through GitHub; the npm link is the skills CLI installer, not an icons-pro-max npm package.
 
 </div>
 
