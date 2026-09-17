@@ -21,9 +21,11 @@ Do not commit credentials or machine-specific paths.
 This project follows the release rules used by
 [codex-mcp-bridge](https://github.com/buidangminh23/codex-mcp-bridge/blob/main/CONTRIBUTING.md):
 SemVer, synchronized versions, tested release commits, version-matched tags, and
-GitHub Releases populated from curated changelog entries. This is a skill/plugin
-bundle; `package.json` is private and provides development commands only.
-Distribution uses GitHub archives rather than npm publishing.
+GitHub Releases populated from curated changelog entries. This skill/plugin bundle is published publicly as `@minhspark/icons-pro-max`
+on npm and as GitHub release archives. The npm files allowlist must include
+plugin manifests, the skill, all assets, and license while excluding tests and
+development scripts. Installing the package downloads files; it does not register
+the skill with an agent.
 
 1. Choose a patch version for fixes, minor for compatible additions, or major
    for breaking changes. Describe breaking changes and migration steps explicitly.
@@ -46,6 +48,11 @@ Distribution uses GitHub archives rather than npm publishing.
 
 The Publish workflow reruns the full six-job matrix, refuses tag/version drift
 and commits outside `main`, builds from committed files, and creates a draft.
+After validation, the npm job verifies the tag and publishes the package through
+OIDC trusted publishing (Node.js 24), skipping an already published version.
+Configure the npm trusted publisher for this repository, GitHub Actions, and
+`publish.yml` after the initial authenticated bootstrap publish. Never store npm
+tokens in the repository. The GitHub release waits for npm publication.
 It uploads ZIP, TAR.GZ and `SHA256SUMS`, downloads them to verify their hashes,
 then publishes. A tag alone is not a completed release: verify the workflow,
 release notes, public downloads, and checksums before reporting success.

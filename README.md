@@ -8,15 +8,15 @@
 
 [![CI](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml/badge.svg)](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml)
 [![GitHub Release](https://img.shields.io/github/v/release/buidangminh23/icons-pro-max?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max/releases/latest)
-[![npm skills CLI](https://img.shields.io/npm/v/skills?style=for-the-badge&label=npm%20skills%20CLI)](https://www.npmjs.com/package/skills)
+[![npm](https://img.shields.io/npm/v/@minhspark/icons-pro-max?style=for-the-badge)](https://www.npmjs.com/package/@minhspark/icons-pro-max)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0078D4?style=for-the-badge)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent-Skills-E53935?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Plugin-FFB300?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max)
 [![Works with](https://img.shields.io/badge/Works_with-Claude_·_Cursor_·_Codex_·_Gemini-43A047?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max)
 
-[Latest release](https://github.com/buidangminh23/icons-pro-max/releases/latest) · [CI](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml) · [npm installer (skills CLI)](https://www.npmjs.com/package/skills)
+[Latest release](https://github.com/buidangminh23/icons-pro-max/releases/latest) · [CI](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml) · [npm package](https://www.npmjs.com/package/@minhspark/icons-pro-max)
 
-Distributed through GitHub; the npm link is the skills CLI installer, not an icons-pro-max npm package.
+Available on npm and GitHub Releases.
 
 </div>
 
@@ -39,6 +39,17 @@ never redraw or recolor a brand mark. The one rule:
 ---
 
 ## Install
+
+#### npm package
+
+```bash
+npm install @minhspark/icons-pro-max
+```
+
+This downloads the bundle to `node_modules/@minhspark/icons-pro-max`. It does not
+register the skill with an agent automatically; use the agent installers below
+or copy the bundled skill and assets to the appropriate agent directory.
+
 
 Download a complete, versioned bundle from [GitHub Releases](https://github.com/buidangminh23/icons-pro-max/releases/latest):
 ZIP or TAR.GZ, including the catalog, all assets, and plugin manifests. Verify it
