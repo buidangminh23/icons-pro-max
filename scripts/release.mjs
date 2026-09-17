@@ -38,7 +38,13 @@ export function checkVersions(version, documents, tag) {
 }
 
 function check(tag) {
-  const version = json('package.json').version;
+  const pkg = json('package.json');
+  const version = pkg.version;
+  assert.equal(pkg.name, '@minhspark/icons-pro-max');
+  assert.equal(pkg.private, false);
+  assert.equal(pkg.publishConfig.access, 'public');
+  assert.equal(json('package-lock.json').name, pkg.name);
+  assert.equal(json('package-lock.json').packages[''].name, pkg.name);
   assert.equal(json('package-lock.json').version, version, 'Lockfile version must match');
   assert.equal(json('package-lock.json').packages[''].version, version, 'Lockfile root version must match');
   checkVersions(version, manifests.map(json), tag);

@@ -4,6 +4,12 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [2.1.1] - 2026-09-17
+
+### Added
+- Publish the complete skill bundle as `@minhspark/icons-pro-max` on npm, with explicit package contents and public installation instructions.
+- Verify npm package contents and publish through GitHub Actions trusted publishing before creating the GitHub release.
+
 ## [2.1.0] - 2026-09-16
 
 ### Added

@@ -1,14 +1,47 @@
 {
-  "name": "icons-pro-max",
-  "version": "2.1.0",
-  "private": true,
+  "name": "@minhspark/icons-pro-max",
+  "version": "2.1.1",
+  "private": false,
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "test": "node --test",
     "check": "node scripts/release.mjs check",
     "version": "node scripts/release.mjs sync && git add .claude-plugin/plugin.json .claude-plugin/marketplace.json .codex-plugin/plugin.json gemini-extension.json",
     "release:notes": "node scripts/release.mjs notes",
-    "release:build": "node scripts/release.mjs build"
-  }
+    "release:build": "node scripts/release.mjs build",
+    "check:package": "npm pack --dry-run --json | node scripts/check-package.mjs"
+  },
+  "description": "Complete icon catalog, bundled assets, and spacing-aware rendering guidance for AI coding agents",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/buidangminh23/icons-pro-max",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buidangminh23/icons-pro-max.git"
+  },
+  "bugs": {
+    "url": "https://github.com/buidangminh23/icons-pro-max/issues"
+  },
+  "keywords": [
+    "icons",
+    "skills",
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    ".agents/plugins/marketplace.json",
+    ".claude-plugin/*.json",
+    ".codex-plugin/*.json",
+    "skills/",
+    "gemini-extension.json",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE"
+  ]
 }

@@ -14,6 +14,7 @@ rules section is the canonical release policy for all contributors and agents.
   downloads before publishing. Never move published tags or replace public assets.
 - Verify the public GitHub release and workflow completion before reporting a
   release as shipped. A local commit, pushed tag, or draft is not publication.
-- This package is private development tooling; do not publish it to npm.
+- Publish `@minhspark/icons-pro-max` publicly on npm after validation, before the
+  GitHub release. Verify package contents and registry version; use trusted publishing.
 - Keep code and contributor documentation in English and free of private paths
   or dependencies on personal instructions outside this repository.
