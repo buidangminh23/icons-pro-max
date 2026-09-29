@@ -94,7 +94,7 @@ Icon collections used: [devicon](https://github.com/devicons/devicon) (MIT, © d
 | `deno.svg` | Deno | [Simple Icons](https://simpleicons.org) (CC0) |
 | `digitalocean.svg` | DigitalOcean | [devicon](https://github.com/devicons/devicon) (MIT) |
 | `django.svg` | Django | [devicon](https://github.com/devicons/devicon) (MIT) |
-| `docker.svg` | Docker | [devicon](https://github.com/devicons/devicon) (MIT) |
+| `docker.svg` | Docker | [Docker brand logo pack](https://www.docker.com/company/newsroom/media-resources) (`docker-mark-ocean-blue`) |
 | `dotnet.svg` | .NET | [devicon](https://github.com/devicons/devicon) (MIT) |
 | `elasticsearch.svg` | Elasticsearch | [devicon](https://github.com/devicons/devicon) (MIT) |
 | `electron.svg` | Electron | [devicon](https://github.com/devicons/devicon) (MIT) |
