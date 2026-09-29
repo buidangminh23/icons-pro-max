@@ -53,11 +53,21 @@ test('archives preserve committed bytes with autocrlf and reject dirty builds', 
     const version = JSON.parse(readFileSync(path.join(fixture, 'package.json'))).version;
     const archive = gunzipSync(readFileSync(path.join(fixture, `dist/icons-pro-max-${version}.tar.gz`)));
     const names = [];
+    let paxPath;
     for (let offset = 0; offset + 512 <= archive.length;) {
       const header = archive.subarray(offset, offset + 512);
       if (header.every((byte) => byte === 0)) break;
-      const name = header.subarray(0, 100).toString().replace(/\0.*$/s, '');
-      const size = parseInt(header.subarray(124, 136).toString().replace(/\0.*$/s, '').trim(), 8) || 0;
+      const field = (start, length) => header.subarray(start, start + length).toString().replace(/\0.*$/s, '');
+      const prefix = field(345, 155);
+      const name = paxPath ?? (prefix ? `${prefix}/${field(0, 100)}` : field(0, 100));
+      const size = parseInt(field(124, 12).trim(), 8) || 0;
+      if (header[156] === 120) {
+        const records = archive.subarray(offset + 512, offset + 512 + size).toString();
+        paxPath = records.match(/^\d+ path=(.*)$/m)?.[1];
+        offset += 512 + Math.ceil(size / 512) * 512;
+        continue;
+      }
+      paxPath = undefined;
       if (header[156] === 48 || header[156] === 0) {
         const relative = name.slice(`icons-pro-max-${version}/`.length);
         assert.deepEqual(archive.subarray(offset + 512, offset + 512 + size), git('show', `HEAD:${relative}`), relative);

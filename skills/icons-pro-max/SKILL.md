@@ -3,7 +3,8 @@ name: icons-pro-max
 description: >
   The single source of truth for every icon on the Personal Web:
   payment methods, QR codes, social/app brand marks, download badges, the
-  lucide-react UI icon set, and 50 tech-stack logos. Gives the exact asset path,
+  lucide-react UI icon set, 144 tech-stack logos, 86 full-color AI provider
+  marks, and 516 Claude connector icons. Gives the exact asset path,
   React component, canonical size, brand color, render recipe, and accessibility
   rule for each icon — plus an anti-slop checklist so an agent never redraws a
   logo, recolors a brand mark, distorts an aspect ratio, or re-inlines a
@@ -24,7 +25,8 @@ description: >
 
 Asset roots:
 - **In the web app:** `public/…` (served at `/…`) and inline React components in `src/`.
-- **In this skill:** `assets/{payment,social,tech,badge}/` — a self-contained mirror so the catalog is usable outside the repo.
+- **In this skill:** `assets/{payment,social,tech,badge,ai,connector}/` — a self-contained mirror so the catalog is usable outside the repo.
+- **Provenance:** [`assets/SOURCES.md`](assets/SOURCES.md) records where every bundled file comes from. Check it before replacing a mark.
 
 ---
 
@@ -38,8 +40,10 @@ Asset roots:
 | A generic action / status glyph (close, download, check…) | **UI (lucide)** | §4 | `lucide-react`, `currentColor`, sized by class |
 | A technology / tool logo (portfolio) | **Tech stack** | §5 | Brand-colored SVG file |
 | An app store or OS download badge | **Download badges** | §6 | Brand-colored SVG badge, black background |
+| An AI model provider, lab, or AI tool | **AI providers** | §7 | Full-color SVG, render as-is |
+| A service Claude connects to (Drive, Slack, Notion…) | **Claude connectors** | §8 | Brand SVG, or the directory's own raster icon |
 
-**Decision rule:** a *brand* (company, product, payment network) → its exact logo asset (§1/§3/§5/§6). A *concept* (save, delete, warning) → a lucide glyph (§4). Never substitute one for the other (a lucide `credit-card` is not the Visa logo).
+**Decision rule:** a *brand* (company, product, payment network) → its exact logo asset (§1/§3/§5–§8). A *concept* (save, delete, warning) → a lucide glyph (§4). Never substitute one for the other (a lucide `credit-card` is not the Visa logo).
 
 ---
 
@@ -58,7 +62,7 @@ Brand payment marks. Rendered through the shared **badge wrapper** in `src/Payme
 | Visa | `VisaLogo` | `/payment/visa.svg` | `assets/payment/visa.svg` | **12px** | card network |
 | Mastercard | `MastercardLogo` | `/payment/mastercard.svg` | `assets/payment/mastercard.svg` | **17px** | card network |
 
-Extra variants in `assets/payment/` (not in the badge set): `zalo.svg`, `zalo-icon.png` — the Zalo app mark bundled with payment; for social/contact use prefer §3 Zalo.
+Extra marks in `assets/payment/` (not wired into the badge set, no tuned height yet): `paypal` · `stripe` · `applepay` · `googlepay` · `americanexpress` · `jcb` · `shopee` · `grab` · `zalo`, plus `zalo-icon.png`. Each carries its own white padded chip. Before shipping one on the web, add a `…Logo` component with a tuned height (§1.B) and move it into the table above.
 
 ### 1.B The badge wrapper (single source — do not re-implement)
 
@@ -146,11 +150,17 @@ export const GmailIcon = ({ className }: { className?: string }) => (
 ```
 
 **Rules**
-- **All six live in `src/SocialIcons.tsx` — import from there.** Do **not** paste a fresh definition into a page. (Historically `ZaloIcon` and `GmailIcon` were copy-pasted into `ContactSection`, `BlogApp`, and `PortfolioApp`; that was consolidated — keep it consolidated. See §7 Anti-Slop #5.)
+- **All six live in `src/SocialIcons.tsx` — import from there.** Do **not** paste a fresh definition into a page. (Historically `ZaloIcon` and `GmailIcon` were copy-pasted into `ContactSection`, `BlogApp`, and `PortfolioApp`; that was consolidated — keep it consolidated. See §9 Anti-Slop #5.)
 - `currentColor` marks: set color on the parent (`text-neutral-600 hover:text-neutral-900`); size only via `className` (`h-5 w-5`). Never bake a fill color into these four **web components** — the web keeps them `currentColor`. (The bundled `assets/social/*.svg` files carry a brand-color default and a white rounded tile so they preview correctly as standalone images — dark marks like GitHub stay visible on dark backdrops, e.g. in the README.)
 - Zalo `/assets/zalo-logo.svg` is the contact/social source; keep it distinct from the payment `zalo.svg`.
 - Gmail is multicolor and immutable — never recolor it to match a theme; mark `aria-hidden` when a visible "Email" label sits beside it.
 - Each link needs an accessible name: a visible label, or `aria-label` on the anchor.
+
+### 3.C Bundled-only social marks (no web component yet)
+
+`x` · `instagram` · `tiktok` · `youtube` · `discord` · `whatsapp` · `messenger` · `reddit` · `threads` · `pinterest` · `medium` · `devto` · `stackoverflow` · `snapchat` · `twitch` · `bluesky` · `mastodon` · `line` · `viber` · `signal` · `wechat` · `kakaotalk`
+
+Each file is the Simple Icons path in its brand color on a padded white tile. To use one on the web, add a `currentColor` component to `src/SocialIcons.tsx` from the same path — never re-trace it.
 
 ---
 
@@ -177,18 +187,20 @@ import { Download, Check, X } from "lucide-react";
 
 ## 5. TECH-STACK LOGOS
 
-50 brand-colored SVGs for the portfolio tech stack. Colors are baked into each file — render as-is.
+144 brand-colored SVGs for languages, frameworks, runtimes, databases, cloud, dev tools, editors, data/ML libraries, operating systems, and browsers. Colors are baked into each file — render as-is.
 
 **Location:** web `public/portfolio/assets/tech/<name>.svg` · skill `assets/tech/<name>.svg`
 
-`android` · `androidstudio` · `apple` · `bash` · `batchfile` · `canvas` · `claude` · `cplusplus` · `css3` · `dart` · `docker` · `express` · `fastapi` · `flask` · `flutter` · `gemini` · `git` · `github` · `github-actions` · `gradle` · `html5` · `java` · `javascript` · `kotlin` · `langflow` · `linux` · `nodejs` · `objectivec` · `orjson` · `playwright` · `postgresql` · `powershell` · `pwa` · `pydantic` · `python` · `pytorch` · `react` · `sqlalchemy` · `sqlite` · `swift` · `telethon` · `tensorflow` · `typescript` · `uvicorn` · `vercel` · `vite` · `vscode` · `vue` · `windows` · `xcode`
+`anaconda` · `android` · `androidstudio` · `angular` · `ansible` · `apache` · `apple` · `archlinux` · `astro` · `aws` · `azure` · `babel` · `bash` · `batchfile` · `bitbucket` · `bootstrap` · `bun` · `c` · `canvas` · `chrome` · `claude` · `cloudflare` · `cmake` · `cplusplus` · `csharp` · `css3` · `cypress` · `dart` · `debian` · `deno` · `digitalocean` · `django` · `docker` · `dotnet` · `elasticsearch` · `electron` · `eslint` · `express` · `fastapi` · `fedora` · `firebase` · `firefox` · `flask` · `flutter` · `gemini` · `git` · `github` · `github-actions` · `gitlab` · `go` · `googlecloud` · `gradle` · `graphql` · `heroku` · `html5` · `intellij` · `java` · `javascript` · `jenkins` · `jest` · `jquery` · `json` · `jupyter` · `keras` · `kotlin` · `kubernetes` · `langflow` · `laravel` · `latex` · `linux` · `lua` · `mariadb` · `markdown` · `matplotlib` · `mongodb` · `mysql` · `neo4j` · `neovim` · `nestjs` · `netlify` · `nextjs` · `nginx` · `nodejs` · `npm` · `numpy` · `nuxt` · `objectivec` · `opencv` · `orjson` · `pandas` · `php` · `playwright` · `pnpm` · `postgresql` · `postman` · `powershell` · `prettier` · `prisma` · `pwa` · `pycharm` · `pydantic` · `python` · `pytorch` · `r` · `rails` · `raspberrypi` · `react` · `redis` · `redux` · `ruby` · `rust` · `safari` · `sass` · `scala` · `scikitlearn` · `selenium` · `spring` · `sqlalchemy` · `sqlite` · `sqlserver` · `storybook` · `supabase` · `svelte` · `swift` · `tailwindcss` · `telethon` · `tensorflow` · `terraform` · `threejs` · `typescript` · `ubuntu` · `uvicorn` · `vercel` · `vim` · `vite` · `vitest` · `vscode` · `vue` · `webpack` · `webstorm` · `windows` · `xcode` · `yaml` · `yarn`
 
 **Rules**
 - Reference by path (`/portfolio/assets/tech/python.svg`); do not paste the SVG source inline.
 - These carry their own brand colors — do **not** apply `currentColor` or a `fill` override.
 - Keep the aspect ratio; size the container, let `object-fit: contain` do the rest.
-- A few near-black marks (`apple`, `vercel`, `github`, `gradle`, `express`, `bash`, `batchfile`) carry a white rounded tile in their **bundled** copy so they stay visible on dark backdrops (e.g. the README). The web's `public/portfolio/assets/tech/` copies stay pristine — render those on light surfaces.
-- `github` appears here (tech context) *and* as a `currentColor` social mark in §3 — pick by context: a stack chip → tech SVG; a "follow me" link → `GitHubIcon`.
+- Marks that are black, near-black, or very dark carry a white rounded tile (`data-tile="1"`) in their **bundled** copy so they stay visible on dark backdrops (e.g. the README). Strip that one `<rect>` if you need the bare mark on a light surface; never recolor the mark instead.
+- Every file is an official mark: devicon `original` (multi-color) first, then Simple Icons or the project's own logo file. `batchfile` and `orjson` are the only house glyphs — neither project publishes a logo. `canvas` is **Canvas LMS** (Instructure), not the HTML `<canvas>` API; `telethon` is the Telethon library's own logo, not Telegram's.
+- `github` appears here (tech context) *and* as a `currentColor` social mark in §3 — pick by context: a stack chip → tech SVG; a "follow me" link → `GitHubIcon`. The same split applies to `claude`/`gemini` (tech chip) vs §7 (AI provider row).
+- The web copies under `public/portfolio/assets/tech/` must be refreshed from these files when a mark is corrected here.
 
 ---
 
@@ -206,16 +218,52 @@ App Store, Google Play, macOS, and Windows download badges. Rendered on a black 
 | App Store · tiếng Việt | `/badge/appstore-vi.svg` | `assets/badge/appstore-vi.svg` | **3.0:1** | Tải về trên App Store — bản Apple phát hành cho vi-VN |
 | Google Play · tiếng Việt | `/badge/googleplay-vi.png` | `assets/badge/googleplay-vi.png` | **3.365:1** | TẢI TRÊN Google Play — bản Google phát hành cho vi, đã cắt viền trong suốt |
 | Windows | `/badge/windows.svg` | `assets/badge/windows.svg` | **3.0:1** | Tải cho Windows (Windows 11 icon) |
+| macOS · English | `/badge/macos-en.svg` | `assets/badge/macos-en.svg` | **3.0:1** | Download for macOS (Finder icon) |
+| Windows · English | `/badge/windows-en.svg` | `assets/badge/windows-en.svg` | **3.0:1** | Download for Windows (Windows 11 icon) |
 
 **Rules**
 - Maintain the original aspect ratio (always set only height or use `object-fit: contain`).
 - Render at a standard height (typically **40px**).
 - Do not invert or modify the brand icons or colors in the badges.
-- Never translate a vendor badge by editing its text. Apple and Google publish their own localized artwork — use `appstore-vi.svg` / `googleplay-vi.png` for Vietnamese pages. The Windows and macOS badges are house-built, so their wording is ours to set.
+- Never translate a vendor badge by editing its text. Apple and Google publish their own localized artwork — use `appstore-vi.svg` / `googleplay-vi.png` for Vietnamese pages. The Windows and macOS badges are house-built, so their wording is ours to set: `macos.svg` / `windows.svg` read **Tải cho** (Vietnamese pages), `macos-en.svg` / `windows-en.svg` read **Download for** (English pages). Pair each badge language with the page language.
 
 ---
 
-## 7. ANTI-SLOP CHECKLIST — Fix On Sight
+## 7. AI PROVIDERS
+
+86 full-color marks for model providers, labs, clouds, and AI tools — from [LobeHub Icons](https://github.com/lobehub/lobe-icons), using the `-color` variant whenever the brand has one.
+
+**Location:** skill `assets/ai/<name>.svg`
+
+`ai21` · `aistudio` · `anthropic` · `aws` · `azureai` · `baichuan` · `bedrock` · `bfl` · `cerebras` · `chatglm` · `claude` · `claudecode` · `cline` · `codex` · `cohere` · `copilot` · `crewai` · `cursor` · `dalle` · `deepinfra` · `deepmind` · `deepseek` · `devin` · `dify` · `doubao` · `elevenlabs` · `fireworks` · `flux` · `gemini` · `geminicli` · `gemma` · `githubcopilot` · `google` · `grok` · `groq` · `hailuo` · `huggingface` · `hunyuan` · `ideogram` · `inflection` · `kimi` · `kling` · `langchain` · `llamaindex` · `lmstudio` · `lovable` · `luma` · `manus` · `mcp` · `meta` · `metaai` · `microsoft` · `midjourney` · `minimax` · `mistral` · `moonshot` · `n8n` · `notebooklm` · `nvidia` · `ollama` · `openai` · `openrouter` · `perplexity` · `pika` · `poe` · `qwen` · `reka` · `replicate` · `replit` · `runway` · `sambanova` · `sora` · `stability` · `stepfun` · `suno` · `together` · `trae` · `udio` · `upstage` · `v0` · `vertexai` · `wenxin` · `windsurf` · `xai` · `yi` · `zhipu`
+
+**Rules**
+- Render as-is. Brands whose official mark is monochrome (OpenAI, Anthropic, xAI, Grok, Ollama, Cursor, Midjourney…) ship in black on a white tile — never tint them to a theme color.
+- `kimi` ships on its black app tile: the mark is white and disappears on light surfaces without it.
+- Provider ≠ product: `claude` is the model/app, `anthropic` is the company, `claudecode` is the CLI; `gemini`, `google`, `deepmind`, `vertexai`, `aistudio`, `notebooklm` are different Google marks. Use the one the sentence names.
+- Group order for a model picker: provider mark first, then model name as text — do not stack two marks.
+
+---
+
+## 8. CLAUDE CONNECTORS
+
+516 icons for the services in the Claude connector directory (Google Drive, Gmail, Google Calendar, Canva, Microsoft 365, Notion, Figma, Slack, and the rest).
+
+**Location:** skill `assets/connector/<name>.svg|png` — see `assets/SOURCES.md` for the file, brand, and origin of each.
+
+**How each icon was chosen (keep this order when adding one)**
+1. A multi-color vector (devicon `original` or LobeHub `-color`) of the **same brand**, confirmed by matching the Simple Icons entry's official domain to the connector's domain.
+2. The Simple Icons vector in its brand color, same domain check.
+3. The icon the connector directory itself serves for that connector, or the brand's own `apple-touch-icon`/favicon — stored as a PNG (≤128px). Google Workspace products use Google's published product icons.
+
+**Rules**
+- A raster connector icon is small: render it at ≤48px. Do not upscale; replace it with a vector when the brand publishes one.
+- Match by domain, never by name alone — many connectors share a word with an unrelated brand (Runway, Orion, Light, Close, Craft, Loops).
+- The directory changes; a connector missing here gets its icon by the same three steps, and a row in `assets/SOURCES.md`.
+
+---
+
+## 9. ANTI-SLOP CHECKLIST — Fix On Sight
 
 The meta-rule: **an icon references something real. Preserve its identity; reuse its one source.**
 
@@ -224,20 +272,21 @@ The meta-rule: **an icon references something real. Preserve its identity; reuse
 | 1 | A **re-drawn / re-traced** logo (pasted path that "looks close") | breaks brand identity; legal risk | use the exact asset from this catalog |
 | 2 | A **recolored brand mark** (Gmail forced monochrome, tech logo tinted) | falsifies the brand | brand icons keep their colors; only lucide + the four `currentColor` social marks restyle |
 | 3 | **Width + height both set** on a payment/tech logo | distorts aspect ratio | set one dimension, `width:auto` / `object-fit:contain` |
-| 4 | A **lucide glyph standing in for a brand** (lucide `credit-card` as "Visa") | wrong meaning | brands → §1/§3/§5/§6 assets; concepts → §4 |
+| 4 | A **lucide glyph standing in for a brand** (lucide `credit-card` as "Visa") | wrong meaning | brands → §1/§3/§5–§8 assets; concepts → §4 |
 | 5 | **Re-inlined duplicate** of a shared icon in a page | drift across copies; the ZaloIcon/GmailIcon trap | import from `src/SocialIcons.tsx` (social) / `src/PaymentLogos.tsx` (payment) |
 | 6 | **Payment mark on a bare dark/tinted surface** | logos assume light backing | keep the white badge wrapper |
 | 7 | **Hardcoded VietQR / bank QR image** | amount-specific, goes stale | generate via `qrUrl()`; bank data from `PAY` |
 | 8 | **Icon-only control with no accessible name** | fails a11y | `aria-label` on the button; brand `<img>` gets real `alt` |
 | 9 | **New icon added, catalog not updated** | this file goes stale, next agent re-inlines | add the asset *and* the row here in one change |
+| 10 | **Look-alike stand-in** (brand color + a generic shape or the name typed in a box, e.g. a purple star for Gemini, a "Zalo" text tile) | it is not the logo; it passes a glance and fails every brand check | fetch the official mark (devicon / Simple Icons / LobeHub / the brand's own file) and record it in `assets/SOURCES.md` |
 
 ---
 
-## 8. ADD-AN-ICON PROCEDURE
+## 10. ADD-AN-ICON PROCEDURE
 
 1. **Classify** — brand or concept? Which group (§0)?
 2. **Concept (lucide)** — reuse a name from §4.B if one fits; otherwise import the new lucide name and add it to §4.B.
-3. **Brand** — drop the official asset into the right folder (`public/payment|portfolio|badge/assets/tech` + this skill's `assets/…`), keep native colors, respect aspect ratio.
+3. **Brand** — drop the official asset into the right folder (`public/payment|portfolio|badge/assets/tech` + this skill's `assets/…`), keep native colors, respect aspect ratio. Record its origin in `assets/SOURCES.md`; if no official mark exists, say so there instead of drawing one.
 4. **Wire the render** — payment → add a `…Logo` to `PaymentLogos.tsx` with a tuned height; social/app → add to `SocialIcons.tsx`; never inline at the call site.
 5. **Update this catalog** — add the row (path, component, size, color) in the matching section.
 6. **A11y** — give it an accessible name; mark decorative marks `aria-hidden` when a text label is present.

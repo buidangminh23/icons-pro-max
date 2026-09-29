@@ -4,6 +4,24 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [2.2.0] - 2026-09-29
+
+### Added
+- **AI providers** (`assets/ai/`, SKILL.md §7): 86 full-color marks for model providers, labs, clouds, and AI tools (OpenAI, Anthropic, Claude, Gemini, Meta, Mistral, DeepSeek, Qwen, xAI, Perplexity, Hugging Face, Ollama, Midjourney, Cursor, and more) from LobeHub Icons.
+- **Claude connectors** (`assets/connector/`, SKILL.md §8): 516 icons for the services in the Claude connector directory, including Google Drive, Gmail, Google Calendar, Canva, Microsoft 365, Notion, Figma, and Slack. Vector marks are used when the brand's official domain matches; otherwise the icon the directory serves. Six connectors with no usable icon are listed in `SOURCES.md`.
+- 94 more tech-stack logos (languages, frameworks, runtimes, databases, cloud, editors, data/ML libraries, operating systems, browsers) — 144 in total.
+- 22 more social/app marks (X, Instagram, TikTok, YouTube, Discord, WhatsApp, Messenger, Reddit, Threads, and more) and 8 more payment marks (PayPal, Stripe, Apple Pay, Google Pay, American Express, JCB, Shopee, Grab).
+- English macOS and Windows download badges (`macos-en.svg`, `windows-en.svg`, "Download for …").
+- `assets/SOURCES.md` records the origin of every bundled file.
+- Anti-slop tell #10: look-alike stand-ins built from a brand color and a generic shape.
+
+### Fixed
+- Replaced 18 tech logos that were look-alike drawings with the official marks: Claude, Gemini, Docker, Express, Flask, GitHub Actions, Langflow, Node.js, Playwright, PWA, Pydantic, SQLAlchemy, Telethon, Uvicorn, Vite, Vue, Windows (Windows 11), and Canvas (Canvas LMS).
+- Zalo social and payment marks are now the official Zalo logo instead of text typed in a box; Facebook and GitHub use the current brand paths; social marks now sit on a padded tile.
+
+### Changed
+- SKILL.md sections renumbered: Anti-slop is now §9 and Add-an-icon §10.
+
 ## [2.1.1] - 2026-09-17
 
 ### Added

@@ -6,31 +6,31 @@
     "nameA": "Icons Pro",
     "nameB": "Max",
     "tagline": "Complete Icon System",
-    "desc": "Nguồn chân lý duy nhất cho mọi icon trên web — phương thức thanh toán, QR, logo mạng xã hội/app, bộ icon UI lucide, 50 logo công nghệ và badge tải app. Mỗi icon có sẵn đường dẫn, component, kích thước, màu thương hiệu và cách render, kèm checklist chống lỗi để không bao giờ vẽ lại hay đổi màu logo gốc.",
+    "desc": "Nguồn chân lý duy nhất cho mọi icon trên web — phương thức thanh toán, QR, logo mạng xã hội/app, bộ icon UI lucide, 144 logo công nghệ, 86 logo AI đủ màu, 516 icon connector của Claude và badge tải app. Mỗi icon là logo gốc có ghi nguồn, kèm đường dẫn, kích thước, màu thương hiệu và cách render, cùng checklist chống lỗi để không bao giờ vẽ lại hay đổi màu logo gốc.",
     "stats": [
       {
-        "value": "6",
+        "value": "15",
         "label": "Thanh toán"
       },
       {
-        "value": "50",
+        "value": "144",
         "label": "Logo công nghệ"
       },
       {
-        "value": "68",
-        "label": "Icon UI"
+        "value": "86",
+        "label": "Logo AI"
       },
       {
-        "value": "6",
+        "value": "516",
+        "label": "Connector Claude"
+      },
+      {
+        "value": "28",
         "label": "Social/App"
       },
       {
-        "value": "6",
+        "value": "8",
         "label": "Badge tải app"
-      },
-      {
-        "value": "MIT",
-        "label": "Giấy phép"
       }
     ]
   },
@@ -38,31 +38,31 @@
     "nameA": "Icons Pro",
     "nameB": "Max",
     "tagline": "Complete Icon System",
-    "desc": "The single source of truth for every icon on the site — payment methods, QR, social/app brand marks, the lucide UI set, 50 tech-stack logos, and store badges. Each icon ships with its path, component, size, brand color, and render recipe, plus an anti-slop checklist so a brand logo is never redrawn or recolored.",
+    "desc": "The single source of truth for every icon on the site — payment methods, QR, social/app brand marks, the lucide UI set, 144 tech-stack logos, 86 full-color AI provider marks, 516 Claude connector icons, and store badges. Every mark is an official asset with a recorded source, plus its path, size, brand color, and render recipe, and an anti-slop checklist so a brand logo is never redrawn or recolored.",
     "stats": [
       {
-        "value": "6",
+        "value": "15",
         "label": "Payment"
       },
       {
-        "value": "50",
+        "value": "144",
         "label": "Tech logos"
       },
       {
-        "value": "68",
-        "label": "UI icons"
+        "value": "86",
+        "label": "AI providers"
       },
       {
-        "value": "6",
+        "value": "516",
+        "label": "Claude connectors"
+      },
+      {
+        "value": "28",
         "label": "Social/App"
       },
       {
-        "value": "6",
+        "value": "8",
         "label": "Store badges"
-      },
-      {
-        "value": "MIT",
-        "label": "License"
       }
     ]
   }
