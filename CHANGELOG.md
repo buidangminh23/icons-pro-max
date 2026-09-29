@@ -4,6 +4,14 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [2.2.1] - 2026-09-29
+
+### Fixed
+- README galleries now fit the GitHub content width: eight columns and short labels, so logos on the right are no longer cut off and long names no longer wrap.
+
+### Added
+- The README's UI icons section previews all 68 lucide glyphs in use, drawn from the official lucide-static SVGs in a neutral gray that reads in light and dark mode. The preview files live in `docs/lucide/` and are not part of the skill or the npm package.
+
 ## [2.2.0] - 2026-09-29
 
 ### Added
