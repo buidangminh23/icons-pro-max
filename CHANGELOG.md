@@ -4,7 +4,7 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
-## [Unreleased]
+## [2.2.2] - 2026-09-29
 
 ### Changed
 - `assets/tech/docker.svg` is now the current Docker mark (ocean blue `#2560FF`) from the official Docker logo pack, replacing the older devicon drawing.
