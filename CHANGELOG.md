@@ -4,6 +4,13 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+- `assets/tech/docker.svg` is now the current Docker mark (ocean blue `#2560FF`) from the official Docker logo pack, replacing the older devicon drawing.
+- README: the "More payment marks" gallery gives every image an explicit width, so GitHub no longer shrinks Grab, JCB, and Zalo to fit their short captions. Heights are balanced optically (square marks taller, long wordmarks shorter) and captions share one baseline.
+- README: the 68 lucide previews in `docs/lucide/` are tinted with an accent color that hints at their meaning instead of a single neutral gray.
+
 ## [2.2.1] - 2026-09-29
 
 ### Fixed

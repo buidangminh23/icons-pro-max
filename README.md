@@ -201,18 +201,18 @@ Components: `VietQRLogo` · `VnpayLogo` · `ZaloPayLogo` · `MoMoLogo` · `VisaL
 <div align="center">
 <table>
 <tr>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/americanexpress.svg" alt="American Express" height="30"><br><sub>Amex</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/applepay.svg" alt="Apple Pay" height="30"><br><sub>Apple Pay</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/googlepay.svg" alt="Google Pay" height="30"><br><sub>Google Pay</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/grab.svg" alt="Grab" height="30"><br><sub>Grab</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/jcb.svg" alt="JCB" height="30"><br><sub>JCB</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/paypal.svg" alt="PayPal" height="30"><br><sub>PayPal</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/shopee.svg" alt="Shopee" height="30"><br><sub>Shopee</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/stripe.svg" alt="Stripe" height="30"><br><sub>Stripe</sub></td>
+<td align="center" valign="bottom"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/americanexpress.svg" alt="American Express" width="35" height="35"><br><sub>Amex</sub></td>
+<td align="center" valign="bottom"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/applepay.svg" alt="Apple Pay" width="41" height="30"><br><sub>Apple Pay</sub></td>
+<td align="center" valign="bottom"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/googlepay.svg" alt="Google Pay" width="49" height="25"><br><sub>Google Pay</sub></td>
+<td align="center" valign="bottom"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/grab.svg" alt="Grab" width="50" height="25"><br><sub>Grab</sub></td>
+<td align="center" valign="bottom"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/jcb.svg" alt="JCB" width="61" height="22"><br><sub>JCB</sub></td>
+<td align="center" valign="bottom"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/paypal.svg" alt="PayPal" width="32" height="35"><br><sub>PayPal</sub></td>
+<td align="center" valign="bottom"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/shopee.svg" alt="Shopee" width="33" height="35"><br><sub>Shopee</sub></td>
+<td align="center" valign="bottom"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/stripe.svg" alt="Stripe" width="29" height="35"><br><sub>Stripe</sub></td>
 </tr>
 <tr>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/zalo.svg" alt="Zalo" height="30"><br><sub>Zalo</sub></td>
-<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/zalo-icon.png" alt="Zalo app icon" height="30"><br><sub>Zalo app i…</sub></td>
+<td align="center" valign="bottom"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/zalo.svg" alt="Zalo" width="52" height="24"><br><sub>Zalo</sub></td>
+<td align="center" valign="bottom"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/payment/zalo-icon.png" alt="Zalo app icon" width="31" height="34"><br><sub>Zalo app i…</sub></td>
 </tr>
 </table>
 </div>
@@ -1251,7 +1251,7 @@ Vector marks where the brand has one (matched by official domain, not by name), 
 
 ### 🎛️ UI icons — lucide-react (68 in use)
 
-Generic action/status glyphs — the only freely-restylable icons (`currentColor`, sized by class). They come from the [lucide-react](https://lucide.dev) package, so the skill bundles no files for them. The previews below are the official [lucide-static](https://www.npmjs.com/package/lucide-static) SVGs, drawn in a neutral gray so they read in light and dark mode; in the web they inherit the text color. Reuse one before importing a new name:
+Generic action/status glyphs — the only freely-restylable icons (`currentColor`, sized by class). They come from the [lucide-react](https://lucide.dev) package, so the skill bundles no files for them. The previews below are the official [lucide-static](https://www.npmjs.com/package/lucide-static) SVGs, each tinted with an accent color that hints at its meaning (mid-tone shades that read in light and dark mode); in the web they inherit the text color. Reuse one before importing a new name:
 
 <div align="center">
 <table>
