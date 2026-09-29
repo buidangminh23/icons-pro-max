@@ -1249,11 +1249,102 @@ The services in the Claude connector directory — Google Drive, Gmail, Google C
 
 Vector marks where the brand has one (matched by official domain, not by name), otherwise the icon the connector directory serves. See [`SOURCES.md`](skills/icons-pro-max/assets/SOURCES.md).
 
-### 🎛️ UI icons — lucide-react (~70 in use)
+### 🎛️ UI icons — lucide-react (68 in use)
 
-Generic action/status glyphs — the only freely-restylable icons (`currentColor`, sized by class). These come from the [lucide-react](https://lucide.dev) package (no bundled files). Reuse one before importing a new name:
+Generic action/status glyphs — the only freely-restylable icons (`currentColor`, sized by class). They come from the [lucide-react](https://lucide.dev) package, so the skill bundles no files for them. The previews below are the official [lucide-static](https://www.npmjs.com/package/lucide-static) SVGs, drawn in a neutral gray so they read in light and dark mode; in the web they inherit the text color. Reuse one before importing a new name:
 
-`ArrowUpRight` · `ArrowLeft` · `X` · `Check` · `CheckCircle2` · `CircleAlert` · `AlertCircle` · `Copy` · `Download` · `Search` · `Send` · `Mail` · `Phone` · `MapPin` · `Calendar` · `Clock` · `Bell` · `ShoppingCart` · `ShoppingBag` · `Store` · `CreditCard` · `Wallet` · `Truck` · `Gift` · `Heart` · `Coffee` · `Star` · `Sparkles` · `Eye` · `Lock` · `ShieldCheck` · `Shield` · `RotateCcw` · `Home` · `User` · `Users` · `Puzzle` · `Languages` · `FileText` · `BookOpen` · `Bookmark` · `PenLine` · `Printer` · `MessageCircle` · `MessageSquare` · `Code2` · `Terminal` · `Cpu` · `Laptop` · `Smartphone` · `Layers` · `Layout` · `LayoutGrid` · `Paintbrush` · `Zap` · `BarChart2` · `Trash2` · `ChevronRight` · `Loader2` · `Building2` · `Lightbulb` · `Bot` · `Telescope` · `Leaf` · `Wrench` · `FlaskConical` · `GitBranch` · `Scale`
+<div align="center">
+<table>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/arrow-up-right.svg" alt="ArrowUpRight" height="24"><br><sub>ArrowUpRight</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/arrow-left.svg" alt="ArrowLeft" height="24"><br><sub>ArrowLeft</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/x.svg" alt="X" height="24"><br><sub>X</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/check.svg" alt="Check" height="24"><br><sub>Check</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/check-circle-2.svg" alt="CheckCircle2" height="24"><br><sub>CheckCircle2</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/circle-alert.svg" alt="CircleAlert" height="24"><br><sub>CircleAlert</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/alert-circle.svg" alt="AlertCircle" height="24"><br><sub>AlertCircle</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/copy.svg" alt="Copy" height="24"><br><sub>Copy</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/download.svg" alt="Download" height="24"><br><sub>Download</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/search.svg" alt="Search" height="24"><br><sub>Search</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/send.svg" alt="Send" height="24"><br><sub>Send</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/mail.svg" alt="Mail" height="24"><br><sub>Mail</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/phone.svg" alt="Phone" height="24"><br><sub>Phone</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/map-pin.svg" alt="MapPin" height="24"><br><sub>MapPin</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/calendar.svg" alt="Calendar" height="24"><br><sub>Calendar</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/clock.svg" alt="Clock" height="24"><br><sub>Clock</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/bell.svg" alt="Bell" height="24"><br><sub>Bell</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/shopping-cart.svg" alt="ShoppingCart" height="24"><br><sub>ShoppingCart</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/shopping-bag.svg" alt="ShoppingBag" height="24"><br><sub>ShoppingBag</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/store.svg" alt="Store" height="24"><br><sub>Store</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/credit-card.svg" alt="CreditCard" height="24"><br><sub>CreditCard</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/wallet.svg" alt="Wallet" height="24"><br><sub>Wallet</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/truck.svg" alt="Truck" height="24"><br><sub>Truck</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/gift.svg" alt="Gift" height="24"><br><sub>Gift</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/heart.svg" alt="Heart" height="24"><br><sub>Heart</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/coffee.svg" alt="Coffee" height="24"><br><sub>Coffee</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/star.svg" alt="Star" height="24"><br><sub>Star</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/sparkles.svg" alt="Sparkles" height="24"><br><sub>Sparkles</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/eye.svg" alt="Eye" height="24"><br><sub>Eye</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/lock.svg" alt="Lock" height="24"><br><sub>Lock</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/shield-check.svg" alt="ShieldCheck" height="24"><br><sub>ShieldCheck</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/shield.svg" alt="Shield" height="24"><br><sub>Shield</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/rotate-ccw.svg" alt="RotateCcw" height="24"><br><sub>RotateCcw</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/home.svg" alt="Home" height="24"><br><sub>Home</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/user.svg" alt="User" height="24"><br><sub>User</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/users.svg" alt="Users" height="24"><br><sub>Users</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/puzzle.svg" alt="Puzzle" height="24"><br><sub>Puzzle</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/languages.svg" alt="Languages" height="24"><br><sub>Languages</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/file-text.svg" alt="FileText" height="24"><br><sub>FileText</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/book-open.svg" alt="BookOpen" height="24"><br><sub>BookOpen</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/bookmark.svg" alt="Bookmark" height="24"><br><sub>Bookmark</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/pen-line.svg" alt="PenLine" height="24"><br><sub>PenLine</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/printer.svg" alt="Printer" height="24"><br><sub>Printer</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/message-circle.svg" alt="MessageCircle" height="24"><br><sub>MessageCirc…</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/message-square.svg" alt="MessageSquare" height="24"><br><sub>MessageSqua…</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/code-2.svg" alt="Code2" height="24"><br><sub>Code2</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/terminal.svg" alt="Terminal" height="24"><br><sub>Terminal</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/cpu.svg" alt="Cpu" height="24"><br><sub>Cpu</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/laptop.svg" alt="Laptop" height="24"><br><sub>Laptop</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/smartphone.svg" alt="Smartphone" height="24"><br><sub>Smartphone</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/layers.svg" alt="Layers" height="24"><br><sub>Layers</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/layout.svg" alt="Layout" height="24"><br><sub>Layout</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/layout-grid.svg" alt="LayoutGrid" height="24"><br><sub>LayoutGrid</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/paintbrush.svg" alt="Paintbrush" height="24"><br><sub>Paintbrush</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/zap.svg" alt="Zap" height="24"><br><sub>Zap</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/bar-chart-2.svg" alt="BarChart2" height="24"><br><sub>BarChart2</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/trash-2.svg" alt="Trash2" height="24"><br><sub>Trash2</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/chevron-right.svg" alt="ChevronRight" height="24"><br><sub>ChevronRight</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/loader-2.svg" alt="Loader2" height="24"><br><sub>Loader2</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/building-2.svg" alt="Building2" height="24"><br><sub>Building2</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/lightbulb.svg" alt="Lightbulb" height="24"><br><sub>Lightbulb</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/bot.svg" alt="Bot" height="24"><br><sub>Bot</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/telescope.svg" alt="Telescope" height="24"><br><sub>Telescope</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/leaf.svg" alt="Leaf" height="24"><br><sub>Leaf</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/wrench.svg" alt="Wrench" height="24"><br><sub>Wrench</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/flask-conical.svg" alt="FlaskConical" height="24"><br><sub>FlaskConical</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/git-branch.svg" alt="GitBranch" height="24"><br><sub>GitBranch</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/docs/lucide/scale.svg" alt="Scale" height="24"><br><sub>Scale</sub></td>
+</tr>
+</table>
+</div>
+
+<sub>Preview files live in [`docs/lucide/`](docs/lucide/) (ISC license, © Lucide Icons and Contributors) and are not part of the skill or the npm package.</sub>
 
 ---
 
