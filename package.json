@@ -1,6 +1,6 @@
 {
   "name": "@minhspark/icons-pro-max",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "private": false,
   "type": "module",
   "engines": {
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "node --test",
     "check": "node scripts/release.mjs check",
-    "version": "node scripts/release.mjs sync && git add .claude-plugin/plugin.json .claude-plugin/marketplace.json .codex-plugin/plugin.json gemini-extension.json",
+    "version": "node scripts/release.mjs sync && git add plugin.json .claude-plugin/plugin.json .claude-plugin/marketplace.json .codex-plugin/plugin.json gemini-extension.json",
     "release:notes": "node scripts/release.mjs notes",
     "release:build": "node scripts/release.mjs build",
     "check:package": "npm pack --dry-run --json | node scripts/check-package.mjs"
@@ -35,6 +35,9 @@
     "access": "public"
   },
   "files": [
+    "plugin.json",
+    "assets/",
+    "THIRD_PARTY_NOTICES.md",
     ".agents/plugins/marketplace.json",
     ".claude-plugin/*.json",
     ".codex-plugin/*.json",

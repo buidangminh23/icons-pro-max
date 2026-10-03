@@ -1,13 +1,14 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { lstatSync, mkdirSync, readFileSync, readdirSync, realpathSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const manifests = ['.claude-plugin/plugin.json', '.claude-plugin/marketplace.json', '.codex-plugin/plugin.json', 'gemini-extension.json'];
-const payload = ['.agents', '.claude-plugin', '.codex-plugin', 'skills', 'README.md', 'CONTRIBUTING.md', 'CHANGELOG.md', 'LICENSE', 'gemini-extension.json'];
+const manifests = ['plugin.json', '.claude-plugin/plugin.json', '.claude-plugin/marketplace.json', '.codex-plugin/plugin.json', 'gemini-extension.json'];
+const payload = ['plugin.json', 'assets', 'THIRD_PARTY_NOTICES.md', '.agents', '.claude-plugin', '.codex-plugin', 'skills', 'README.md', 'CONTRIBUTING.md', 'CHANGELOG.md', 'LICENSE', 'gemini-extension.json'];
+const portalPayload = ['plugin.json', 'assets', 'skills', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'README.md'];
 const read = (file) => readFileSync(path.join(root, file), 'utf8');
 const json = (file) => JSON.parse(read(file));
 const git = (...args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();
@@ -37,6 +38,61 @@ export function checkVersions(version, documents, tag) {
   if (tag) assert.equal(tag, `v${version}`, 'Tag must match package.json');
 }
 
+export function checkPortableManifest(document, base = root) {
+  assert.ok(document && typeof document === 'object' && !Array.isArray(document));
+  const fields = ['$schema', 'name', 'version', 'description', 'author', 'homepage', 'repository', 'license', 'keywords', 'extensions'];
+  assert.ok(Object.keys(document).every((field) => fields.includes(field)), 'Unknown portable manifest field');
+  assert.equal(document.$schema, 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json');
+  assert.equal(document.name, 'icons-pro-max');
+  assert.match(document.version, /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/);
+  assert.equal(document.author?.name, 'buidangminh23');
+  assert.equal(document.author?.email, 'buidangminh23@gmail.com');
+  assert.ok(Object.keys(document.author).every((field) => ['name', 'email', 'url'].includes(field)));
+  assert.equal(document.repository, 'https://github.com/buidangminh23/icons-pro-max');
+  for (const value of [document.description, document.license]) assert.ok(typeof value === 'string' && value.trim());
+  for (const value of [document.homepage, document.repository, document.author.url]) {
+    const url = new URL(value);
+    assert.equal(url.protocol, 'https:');
+    assert.ok(!url.username && !url.password);
+  }
+  assert.ok(Array.isArray(document.keywords) && document.keywords.every((value) => typeof value === 'string'));
+  assert.ok(document.extensions && Object.values(document.extensions).every((value) => value && typeof value === 'object' && !Array.isArray(value)));
+  const openai = document.extensions['com.openai'];
+  assert.ok(openai && !openai.apps && !openai.hooks && !openai.mcpServers, 'This package contains skills only');
+  const listing = openai.interface;
+  for (const [field, limit] of [['displayName', 30], ['shortDescription', 30], ['longDescription', 4000], ['developerName', 80]]) {
+    assert.ok(typeof listing?.[field] === 'string' && listing[field].trim() && listing[field].length <= limit, `Invalid listing ${field}`);
+  }
+  assert.equal(listing.developerName, document.author.name);
+  assert.equal(listing.category, 'Design');
+  assert.ok(Array.isArray(listing.capabilities) && listing.capabilities.length <= 20 && listing.capabilities.every((value) => typeof value === 'string' && value.trim() && value.length <= 120));
+  assert.ok(Array.isArray(listing.defaultPrompt) && listing.defaultPrompt.length <= 3 && new Set(listing.defaultPrompt).size === listing.defaultPrompt.length);
+  assert.ok(listing.defaultPrompt.every((value) => typeof value === 'string' && value.trim() && value.length <= 128 && !value.includes('@')));
+  for (const field of ['websiteURL', 'supportURL']) {
+    const url = new URL(listing[field]);
+    assert.equal(url.protocol, 'https:');
+    assert.ok(!url.username && !url.password);
+  }
+  for (const field of ['brandColor', 'brandColorDark']) assert.match(listing[field], /^#[0-9A-Fa-f]{6}$/);
+  for (const field of ['composerIcon', 'logo']) {
+    const relative = listing[field];
+    assert.ok(typeof relative === 'string' && relative.startsWith('./') && !/[\\:\x00-\x1f\x7f]/.test(relative) && !relative.split('/').includes('..'), `Unsafe listing asset: ${field}`);
+    const file = path.resolve(base, relative);
+    const inside = path.relative(realpathSync(base), realpathSync(file));
+    assert.ok(inside && !path.isAbsolute(inside) && inside !== '..' && !inside.startsWith(`..${path.sep}`), 'Listing asset escapes package');
+    assert.ok(lstatSync(file).isFile() && !lstatSync(file).isSymbolicLink(), 'Listing asset must be a regular file');
+    const bytes = readFileSync(file);
+    assert.ok(bytes.length <= 5 * 1024 * 1024);
+    assert.ok(file.endsWith('.svg'));
+    const svg = bytes.toString('utf8');
+    assert.match(svg, /^<svg\s/);
+    assert.match(svg, /xmlns="http:\/\/www.w3.org\/2000\/svg"/);
+    const dimensions = svg.match(/viewBox="([\d.]+) ([\d.]+) ([\d.]+) ([\d.]+)"/);
+    assert.ok(dimensions && Number(dimensions[3]) >= 48 && dimensions[3] === dimensions[4], 'Listing icon must be square and at least 48px');
+    assert.ok(!/<(?:script|foreignObject)\b|(?:href|onload|onclick)=/i.test(svg));
+  }
+}
+
 function check(tag) {
   const pkg = json('package.json');
   const version = pkg.version;
@@ -48,6 +104,7 @@ function check(tag) {
   assert.equal(json('package-lock.json').version, version, 'Lockfile version must match');
   assert.equal(json('package-lock.json').packages[''].version, version, 'Lockfile root version must match');
   checkVersions(version, manifests.map(json), tag);
+  checkPortableManifest(json('plugin.json'));
   releaseNotes(read('CHANGELOG.md'), version);
   assert.match(read('skills/icons-pro-max/SKILL.md'), /^name: icons-pro-max\r?$/m);
   assert.equal(json('.agents/plugins/marketplace.json').plugins[0].source.path, './');
@@ -60,6 +117,9 @@ function check(tag) {
     if (asset.endsWith('.svg')) assert.match(bytes.toString(), /<svg[\s>]/);
     else assert.equal(bytes.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
   }
+  const notices = read('THIRD_PARTY_NOTICES.md');
+  for (const notice of ['Copyright (c) 2015 konpa', 'Copyright (c) 2023 LobeHub', 'CC0 1.0 Universal']) assert.ok(notices.includes(notice), `Missing upstream notice: ${notice}`);
+  for (const file of ['skills/icons-pro-max/SKILL.md', 'plugin.json']) assert.ok(!/\b[A-Za-z]:[\\/]|\/Users\/|\/home\//.test(read(file)), `Machine-specific path in ${file}`);
   return version;
 }
 
@@ -77,6 +137,9 @@ function build(tag) {
     const hash = createHash('sha256').update(readFileSync(path.join(output, name))).digest('hex');
     sums.push(`${hash}  ${name}`);
   }
+  const portalName = `icons-pro-max-${version}-plugin.zip`;
+  git('-c', 'core.autocrlf=false', 'archive', '--format=zip', `--output=${path.join(output, portalName)}`, 'HEAD', '--', ...portalPayload);
+  sums.push(`${createHash('sha256').update(readFileSync(path.join(output, portalName))).digest('hex')}  ${portalName}`);
   writeFileSync(path.join(output, 'SHA256SUMS'), `${sums.join('\n')}\n`);
   writeFileSync(path.join(output, 'release-notes.md'), `${releaseNotes(read('CHANGELOG.md'), version)}\n`);
   process.stdout.write(`Built icons-pro-max ${version} from ${git('rev-parse', 'HEAD')}\n`);

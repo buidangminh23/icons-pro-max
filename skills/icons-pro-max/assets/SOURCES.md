@@ -4,6 +4,11 @@ Where every bundled mark comes from. Brand marks remain the property of their ow
 
 Icon collections used: [devicon](https://github.com/devicons/devicon) (MIT, © devicons contributors), [Simple Icons](https://simpleicons.org) (CC0 1.0), [LobeHub Icons](https://github.com/lobehub/lobe-icons) (MIT, © LobeHub). Their licenses cover the SVG drawings, not the trademarks they depict.
 
+The complete upstream license texts are included in
+[`THIRD_PARTY_NOTICES.md`](../../../THIRD_PARTY_NOTICES.md) at the plugin root.
+Keep those notices when copying assets into another project. The source names
+below identify provenance; they do not transfer brand ownership to the publisher.
+
 ## payment (16)
 
 | File | Brand | Source |

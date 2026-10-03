@@ -1,0 +1,45 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "icons-pro-max",
+  "version": "2.2.3",
+  "description": "Portable icon catalog and rendering guidance with bundled brand assets for AI agents.",
+  "author": {
+    "name": "buidangminh23",
+    "email": "buidangminh23@gmail.com",
+    "url": "https://github.com/buidangminh23"
+  },
+  "homepage": "https://github.com/buidangminh23/icons-pro-max",
+  "repository": "https://github.com/buidangminh23/icons-pro-max",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "icons",
+    "brand-assets",
+    "design",
+    "agent-skills"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Icons Pro Max",
+        "shortDescription": "Icons with faithful rendering",
+        "longDescription": "Find bundled payment, social, technology, AI provider, and connector marks; copy the selected asset into the current project and apply its rendering guidance. Includes provenance and third-party notices. Example application paths are adapted to the user's project. The plugin supplies a skill and local files, with no hosted service, account connection, payment codes, or automatic project changes. Brand marks remain the property of their owners.",
+        "developerName": "buidangminh23",
+        "category": "Design",
+        "capabilities": [
+          "Find icon assets",
+          "Guide icon rendering"
+        ],
+        "websiteURL": "https://github.com/buidangminh23/icons-pro-max",
+        "supportURL": "https://github.com/buidangminh23/icons-pro-max/issues",
+        "defaultPrompt": [
+          "Find the bundled icon assets for my interface.",
+          "Audit my interface for distorted or inconsistent icons."
+        ],
+        "brandColor": "#2357C6",
+        "brandColorDark": "#8CB4FF",
+        "composerIcon": "./assets/plugin-icon.svg",
+        "logo": "./assets/plugin-icon.svg"
+      }
+    }
+  }
+}
