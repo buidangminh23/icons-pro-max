@@ -32,13 +32,18 @@ the skill with an agent.
 2. Add one dated `## [X.Y.Z] - YYYY-MM-DD` entry to `CHANGELOG.md` using Keep a
    Changelog categories. Explain user-visible behavior; do not substitute commit lists.
 3. Run `npm version X.Y.Z --no-git-tag-version`. The version hook synchronizes
-   Claude, Codex, Gemini, and Claude marketplace versions. The agents marketplace
+   portable Agent Plugin, Claude, Codex, Gemini, and Claude marketplace versions. The agents marketplace
    has no version field. Missing changelog entries block the hook.
 4. Run the validation commands above. Review `git diff --check` and the diff;
    stage only intended files, commit, push, and merge through a pull request.
 5. From a clean, updated `main`, run `npm run release:build`. Inspect the ZIP and
    TAR.GZ content. Both contain one versioned root with all installation manifests
    (including hidden directories), the skill, its assets, and user documentation.
+   The additional `icons-pro-max-X.Y.Z-plugin.zip` contains the portable manifest
+   directly at the archive root for skills-only portal upload. Its explicit
+   payload excludes development scripts and compatibility-only metadata.
+   Verify all existing icon assets and provenance are retained in each archive;
+   include `THIRD_PARTY_NOTICES.md` and the original listing artwork.
 6. Tag the verified commit and push the tag:
 
    ```bash

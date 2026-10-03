@@ -4,6 +4,14 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [2.2.3] - 2026-10-03
+
+### Fixed
+- Package the existing skill as a portable Agent Plugin with publisher metadata, an original listing icon, and a submission ZIP containing `plugin.json` at the archive root.
+- Adapt the catalog's example application paths to the recipient's project instead of assuming the original web app exists.
+- Include upstream icon license notices alongside all existing bundled assets and provenance.
+- Validate portable manifests, safe asset paths, version synchronization, npm contents, and complete archive payloads before release.
+
 ## [2.2.2] - 2026-09-29
 
 ### Changed

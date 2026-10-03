@@ -7,7 +7,7 @@ const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 assert.equal(pack.name, pkg.name);
 assert.equal(pack.version, pkg.version);
 const files = pack.files.map((file) => file.path);
-for (const required of ['package.json', 'README.md', 'LICENSE', '.agents/plugins/marketplace.json', '.claude-plugin/plugin.json', '.claude-plugin/marketplace.json', '.codex-plugin/plugin.json', 'gemini-extension.json', 'skills/icons-pro-max/SKILL.md']) {
+for (const required of ['package.json', 'plugin.json', 'assets/plugin-icon.svg', 'THIRD_PARTY_NOTICES.md', 'README.md', 'LICENSE', '.agents/plugins/marketplace.json', '.claude-plugin/plugin.json', '.claude-plugin/marketplace.json', '.codex-plugin/plugin.json', 'gemini-extension.json', 'skills/icons-pro-max/SKILL.md']) {
   assert.ok(files.includes(required), `Missing npm package file: ${required}`);
 }
 for (const relative of fs.readdirSync('skills/icons-pro-max/assets', { recursive: true, withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => `${entry.parentPath}/${entry.name}`.replaceAll('\\', '/'))) {

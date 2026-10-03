@@ -2,9 +2,9 @@
 
 # 🎨 icons-pro-max
 
-### The Complete Icon System for the Personal Web
+### A Portable Icon System for AI Agents
 
-*One catalog for every icon on the Personal Web — payment marks, QR, social/app brand icons, the lucide UI set, 144 tech-stack logos, 86 full-color AI provider marks, and 516 Claude connector icons. Exact paths, components, sizes, brand colors, render recipes, sources, and an anti-slop checklist.*
+*One portable catalog — payment marks, QR guidance, social/app brand icons, the lucide UI set, 144 tech-stack logos, 86 full-color AI provider marks, and 516 Claude connector icons. Bundled assets, rendering recipes, sources, and an anti-slop checklist.*
 
 [![CI](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml/badge.svg)](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml)
 [![GitHub Release](https://img.shields.io/github/v/release/buidangminh23/icons-pro-max?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max/releases/latest)
@@ -47,6 +47,25 @@ never redraw or recolor a brand mark. The one rule:
 ---
 
 ## Install
+
+#### ChatGPT Agent Plugin
+
+The release asset `icons-pro-max-X.Y.Z-plugin.zip` contains the portable
+`plugin.json` at its root, the skill, all bundled assets, listing artwork, and
+third-party notices. Check it against the release's `SHA256SUMS` before uploading.
+For author testing, open **Plugins → Upload new or existing plugin** using the
+intended publisher account and upload this ZIP as a skills-only package.
+
+This prepares a draft; public directory availability still requires a verified
+developer identity, review, and publication through the
+[OpenAI submission portal](https://developers.openai.com/plugins/deploy/submission).
+The GitHub release is not a public directory listing. No Sites hosting, MCP
+server, or account connection is required by this skill-only package.
+
+In Codex or the ChatGPT desktop app, the repository marketplace below provides
+local installation. Bundled asset paths are relative to the skill directory;
+application paths in the catalog are examples to adapt to the current project.
+
 #### GitHub Packages
 
 A repository-linked copy is available as `@buidangminh23/icons-pro-max` on
@@ -75,9 +94,10 @@ or copy the bundled skill and assets to the appropriate agent directory.
 
 Download a complete, versioned bundle from [GitHub Releases](https://github.com/buidangminh23/icons-pro-max/releases/latest):
 ZIP or TAR.GZ, including the catalog, all assets, and plugin manifests. Verify it
-against the attached `SHA256SUMS` before extracting. Each archive has a single
+against the attached `SHA256SUMS` before extracting. The general release archives have a single
 `icons-pro-max-X.Y.Z/` root; preserve its hidden manifest directories when copying.
 See [release and verification instructions](CONTRIBUTING.md#release-rules).
+The separate `-plugin.zip` uses an unprefixed root for the submission portal.
 
 Pick your tool. Every block has a **copy button** (hover its top-right corner).
 

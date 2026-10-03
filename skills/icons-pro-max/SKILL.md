@@ -1,7 +1,7 @@
 ---
 name: icons-pro-max
 description: >
-  The single source of truth for every icon on the Personal Web:
+  A portable icon catalog and rendering guide for the current project:
   payment methods, QR codes, social/app brand marks, download badges, the
   lucide-react UI icon set, 144 tech-stack logos, 86 full-color AI provider
   marks, and 516 Claude connector icons. Gives the exact asset path,
@@ -9,7 +9,7 @@ description: >
   rule for each icon — plus an anti-slop checklist so an agent never redraws a
   logo, recolors a brand mark, distorts an aspect ratio, or re-inlines a
   duplicated icon. Use whenever adding, rendering, swapping, or auditing an icon
-  anywhere in the site.
+  anywhere in a website, app, or document.
 ---
 
 # Icons Pro Max — The Complete Icon System
@@ -27,6 +27,17 @@ Asset roots:
 - **In the web app:** `public/…` (served at `/…`) and inline React components in `src/`.
 - **In this skill:** `assets/{payment,social,tech,badge,ai,connector}/` — a self-contained mirror so the catalog is usable outside the repo.
 - **Provenance:** [`assets/SOURCES.md`](assets/SOURCES.md) records where every bundled file comes from. Check it before replacing a mark.
+
+Application paths, component names, and tuned sizes below are examples from the
+catalog's original web app. Inspect the current project's framework and asset
+conventions first. Resolve bundled paths relative to this `SKILL.md`, then copy
+only the selected assets into the project's public or asset directory and use
+that project's own paths and components. Do not assume its `src/`, `public/`,
+payment configuration, or React components already exist. For documents, use the
+bundled file with the document tool's image import mechanism. Keep provenance and
+applicable notices with copied assets. Never read or import payment codes or
+account details from the original application; ask the user for their own data
+only when their requested task needs it.
 
 ---
 
