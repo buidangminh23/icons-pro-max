@@ -48,6 +48,7 @@ test('portable metadata rejects unsafe paths, missing assets and unsupported com
     (changed) => { changed.extensions['com.openai'].hooks = './hooks/hooks.json'; },
     (changed) => { changed.extensions['com.openai'].interface.shortDescription = 'x'.repeat(31); },
     (changed) => { changed.author.email = 'other@example.invalid'; },
+    (changed) => { changed.extensions['com.openai'].interface.category = 'Design'; },
     (changed) => { changed.extensions['com.openai'].interface.websiteURL = 'https://user:secret@example.invalid'; },
   ]) {
     const changed = structuredClone(manifest);

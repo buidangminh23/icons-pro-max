@@ -64,7 +64,7 @@ export function checkPortableManifest(document, base = root) {
     assert.ok(typeof listing?.[field] === 'string' && listing[field].trim() && listing[field].length <= limit, `Invalid listing ${field}`);
   }
   assert.equal(listing.developerName, document.author.name);
-  assert.equal(listing.category, 'Design');
+  assert.equal(listing.category, 'Creativity');
   assert.ok(Array.isArray(listing.capabilities) && listing.capabilities.length <= 20 && listing.capabilities.every((value) => typeof value === 'string' && value.trim() && value.length <= 120));
   assert.ok(Array.isArray(listing.defaultPrompt) && listing.defaultPrompt.length <= 3 && new Set(listing.defaultPrompt).size === listing.defaultPrompt.length);
   assert.ok(listing.defaultPrompt.every((value) => typeof value === 'string' && value.trim() && value.length <= 128 && !value.includes('@')));
