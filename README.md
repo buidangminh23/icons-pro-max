@@ -6,13 +6,10 @@
 
 *One portable catalog — payment marks, QR guidance, social/app brand icons, the lucide UI set, 144 tech-stack logos, 86 full-color AI provider marks, and 516 Claude connector icons. Bundled assets, rendering recipes, sources, and an anti-slop checklist.*
 
-[![CI](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml/badge.svg)](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml)
-[![GitHub Release](https://img.shields.io/github/v/release/buidangminh23/icons-pro-max?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max/releases/latest)
-[![npm](https://img.shields.io/npm/v/@minhspark/icons-pro-max?style=for-the-badge)](https://www.npmjs.com/package/@minhspark/icons-pro-max)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0078D4?style=for-the-badge)](LICENSE)
-[![Agent Skills](https://img.shields.io/badge/Agent-Skills-E53935?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max)
-[![Claude Code](https://img.shields.io/badge/Claude_Code-Plugin-FFB300?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max)
-[![Works with](https://img.shields.io/badge/Works_with-Claude_·_Cursor_·_Codex_·_Gemini-43A047?style=for-the-badge)](https://github.com/buidangminh23/icons-pro-max)
+
+[![npm downloads](https://raw.githubusercontent.com/buidangminh23/icons-pro-max/npm-downloads/stats-npm-downloads.svg)](https://www.npmjs.com/package/@minhspark/icons-pro-max)
+[![npm downloads / 30d](https://raw.githubusercontent.com/buidangminh23/icons-pro-max/npm-downloads/stats-npm-downloads-month.svg)](https://www.npmjs.com/package/@minhspark/icons-pro-max)
 
 [Latest release](https://github.com/buidangminh23/icons-pro-max/releases/latest) · [CI](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml) · [npm package](https://www.npmjs.com/package/@minhspark/icons-pro-max)
 

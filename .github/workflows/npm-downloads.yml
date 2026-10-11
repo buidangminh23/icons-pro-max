@@ -1,0 +1,51 @@
+name: npm download badges
+
+on:
+  schedule:
+    - cron: '43 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/npm-download-badges.mjs
+      - .github/workflows/npm-downloads.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: npm-download-badges
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - run: node scripts/npm-download-badges.mjs
+      - name: Publish badges
+        working-directory: dist/npm-downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          gh auth setup-git
+          git init
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git remote add origin "https://github.com/$REPOSITORY.git"
+          remote_ref=$(git ls-remote --heads origin refs/heads/npm-downloads)
+          if [ -n "$remote_ref" ]; then
+            git fetch --depth=1 origin npm-downloads
+            git reset --soft FETCH_HEAD
+          fi
+          git add stats-npm-downloads.svg stats-npm-downloads-month.svg downloads.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'docs: refresh npm download badges'
+          git push origin HEAD:refs/heads/npm-downloads
