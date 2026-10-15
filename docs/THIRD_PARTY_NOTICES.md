@@ -1,6 +1,6 @@
 # Third-party notices
 
-Brand names and trademarks remain the property of their respective owners. These notices cover the icon drawings, not trademark rights. See `skills/icons-pro-max/assets/SOURCES.md` for per-file provenance. Assets attributed there to original brand files or directory icons retain their respective owners rights; this document does not relicense them. The listing graphic at `assets/plugin-icon.svg` is original Icons Pro Max artwork covered by the root MIT license.
+Brand names and trademarks remain the property of their respective owners. These notices cover the icon drawings, not trademark rights. See [`SOURCES.md`](../skills/icons-pro-max/assets/SOURCES.md) for per-file provenance. Assets attributed there to original brand files or directory icons retain their respective owners rights; this document does not relicense them. The listing graphic at `docs/assets/plugin-icon.svg` is original Icons Pro Max artwork covered by the root MIT license.
 
 ## Devicon
 

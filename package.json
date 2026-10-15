@@ -1,6 +1,6 @@
 {
   "name": "@minhspark/icons-pro-max",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "private": false,
   "type": "module",
   "engines": {
@@ -36,15 +36,15 @@
   },
   "files": [
     "plugin.json",
-    "assets/",
-    "THIRD_PARTY_NOTICES.md",
+    "docs/assets/",
+    "docs/THIRD_PARTY_NOTICES.md",
     ".agents/plugins/marketplace.json",
     ".claude-plugin/*.json",
     ".codex-plugin/*.json",
     "skills/",
     "gemini-extension.json",
     "CHANGELOG.md",
-    "CONTRIBUTING.md",
+    ".github/CONTRIBUTING.md",
     "LICENSE"
   ]
 }

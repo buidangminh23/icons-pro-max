@@ -4,6 +4,13 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [2.2.4] - 2026-10-15
+
+### Changed
+- Simplify the repository root by grouping contributor instructions under `.github/` and license notices and listing artwork under `docs/`.
+- Keep installation manifests, npm packages, release archives, and documentation links aligned with the new locations.
+- Shorten agent instructions to reference the shared contributor policy.
+
 ## [2.2.3] - 2026-10-03
 
 ### Fixed
