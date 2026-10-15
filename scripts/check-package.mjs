@@ -7,6 +7,7 @@ const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 assert.equal(pack.name, pkg.name);
 assert.equal(pack.version, pkg.version);
 const files = pack.files.map((file) => file.path);
+assert.ok(files.includes('docs/assets/logo.png'), 'Missing README logo');
 for (const required of ['package.json', 'plugin.json', 'docs/assets/plugin-icon.svg', 'docs/THIRD_PARTY_NOTICES.md', '.github/CONTRIBUTING.md', 'README.md', 'LICENSE', '.agents/plugins/marketplace.json', '.claude-plugin/plugin.json', '.claude-plugin/marketplace.json', '.codex-plugin/plugin.json', 'gemini-extension.json', 'skills/icons-pro-max/SKILL.md']) {
   assert.ok(files.includes(required), `Missing npm package file: ${required}`);
 }
