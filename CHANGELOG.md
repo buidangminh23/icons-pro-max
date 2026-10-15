@@ -4,6 +4,11 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [2.2.6] - 2026-10-15
+
+### Changed
+- Match the plugin listing and composer icon to the approved four-shape logo with a transparent, scalable full-color SVG.
+
 ## [2.2.5] - 2026-10-15
 
 ### Changed

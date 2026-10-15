@@ -1,7 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
-  <rect width="256" height="256" rx="56" fill="#2357C6"/>
-  <rect x="48" y="48" width="64" height="64" rx="16" fill="#FFFFFF"/>
-  <circle cx="176" cy="80" r="32" fill="#FFFFFF"/>
-  <path d="M80 144 112 176 80 208 48 176Z" fill="#FFFFFF"/>
-  <path d="M160 144H192V160H208V192H192V208H160V192H144V160H160Z" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Icons Pro Max</title>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0875FF"/>
+      <stop offset="1" stop-color="#0761F3"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7047FF"/>
+      <stop offset="1" stop-color="#7542F1"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FF6448"/>
+      <stop offset="1" stop-color="#FF704E"/>
+    </linearGradient>
+    <linearGradient id="periwinkle" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5F78FF"/>
+      <stop offset="1" stop-color="#4C6AF4"/>
+    </linearGradient>
+  </defs>
+  <path d="M76 24H104Q124 24 124 44V72C124 101 101 124 72 124H44Q24 124 24 104V76C24 47 47 24 76 24Z" fill="url(#blue)"/>
+  <circle cx="182" cy="74" r="50" fill="url(#violet)"/>
+  <path d="M74 132C102 132 124 154 124 182V212Q124 232 104 232H74C46 232 24 210 24 182S46 132 74 132Z" fill="url(#coral)"/>
+  <path d="M152 132H212Q232 132 232 152V180C232 209 209 232 180 232H152Q132 232 132 212V152Q132 132 152 132Z" fill="url(#periwinkle)"/>
 </svg>
