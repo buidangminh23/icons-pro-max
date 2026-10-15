@@ -4,6 +4,12 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [2.2.5] - 2026-10-15
+
+### Changed
+- Replace the README's palette emoji and title with the approved full-color Icons Pro Max logo.
+- Bundle the original transparent logo with npm packages and release archives and verify its presence during package checks.
+
 ## [2.2.4] - 2026-10-15
 
 ### Changed

@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎨 icons-pro-max
+<h1><img src="docs/assets/logo.png" alt="icons-pro-max" width="640"></h1>
 
 ### A Portable Icon System for AI Agents
 
