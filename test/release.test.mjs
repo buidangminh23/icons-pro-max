@@ -91,7 +91,7 @@ test('archives preserve committed bytes with autocrlf and reject dirty builds', 
   const fixture = mkdtempSync(path.join(tmpdir(), 'icons-release-test-'));
   const git = (...args) => execFileSync('git', args, { cwd: fixture, stdio: ['ignore', 'pipe', 'pipe'] });
   try {
-    for (const file of ['plugin.json', 'assets', 'THIRD_PARTY_NOTICES.md', '.agents', '.claude-plugin', '.codex-plugin', 'skills', 'scripts', 'README.md', 'CONTRIBUTING.md', 'CHANGELOG.md', 'LICENSE', 'gemini-extension.json', 'package.json', 'package-lock.json', '.gitignore']) {
+    for (const file of ['plugin.json', 'docs/assets', 'docs/THIRD_PARTY_NOTICES.md', '.agents', '.claude-plugin', '.codex-plugin', 'skills', 'scripts', 'README.md', '.github/CONTRIBUTING.md', 'CHANGELOG.md', 'LICENSE', 'gemini-extension.json', 'package.json', 'package-lock.json', '.gitignore']) {
       cpSync(file, path.join(fixture, file), { recursive: true });
     }
     git('init');
@@ -127,13 +127,13 @@ test('archives preserve committed bytes with autocrlf and reject dirty builds', 
       }
       offset += 512 + Math.ceil(size / 512) * 512;
     }
-    for (const required of ['plugin.json', 'assets/plugin-icon.svg', 'THIRD_PARTY_NOTICES.md', '.agents/plugins/marketplace.json', '.claude-plugin/plugin.json', '.codex-plugin/plugin.json', 'gemini-extension.json', 'CONTRIBUTING.md', 'skills/icons-pro-max/SKILL.md']) {
+    for (const required of ['plugin.json', 'docs/assets/plugin-icon.svg', 'docs/THIRD_PARTY_NOTICES.md', '.agents/plugins/marketplace.json', '.claude-plugin/plugin.json', '.codex-plugin/plugin.json', 'gemini-extension.json', '.github/CONTRIBUTING.md', 'skills/icons-pro-max/SKILL.md']) {
       assert.ok(names.includes(required), required);
     }
     assert.ok(names.some((name) => name.endsWith('.png')));
     assert.ok(names.some((name) => name.endsWith('.svg')));
     const portal = zipFiles(readFileSync(path.join(fixture, `dist/icons-pro-max-${version}-plugin.zip`)));
-    const expected = git('ls-tree', '-r', '--name-only', 'HEAD', '--', 'plugin.json', 'assets', 'skills', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'README.md').toString().trim().split('\n');
+    const expected = git('ls-tree', '-r', '--name-only', 'HEAD', '--', 'plugin.json', 'docs/assets', 'skills', 'LICENSE', 'docs/THIRD_PARTY_NOTICES.md', 'README.md', '.github/CONTRIBUTING.md').toString().trim().split('\n');
     assert.deepEqual([...portal.keys()].sort(), expected.sort());
     assert.equal([...portal.keys()].filter((name) => name.startsWith('skills/icons-pro-max/assets/')).length, 799);
     for (const [name, bytes] of portal) assert.deepEqual(bytes, git('show', `HEAD:${name}`), name);
@@ -145,6 +145,14 @@ test('archives preserve committed bytes with autocrlf and reject dirty builds', 
       writeFileSync(destination, bytes);
     }
     checkPortableManifest(JSON.parse(readFileSync(path.join(fresh, 'plugin.json'), 'utf8')), fresh);
+    for (const [document, target] of [
+      ['README.md', '.github/CONTRIBUTING.md#release-rules'],
+      ['skills/icons-pro-max/assets/SOURCES.md', '../../../docs/THIRD_PARTY_NOTICES.md'],
+      ['docs/THIRD_PARTY_NOTICES.md', '../skills/icons-pro-max/assets/SOURCES.md'],
+    ]) {
+      assert.ok(readFileSync(path.join(fresh, document), 'utf8').includes(`](${target})`));
+      assert.ok(readFileSync(path.resolve(fresh, path.dirname(document), target.split('#')[0])).length > 0);
+    }
     const sums = readFileSync(path.join(fixture, 'dist/SHA256SUMS'), 'utf8');
     assert.equal(sums.trim().split('\n').length, 3);
     assert.match(sums, new RegExp(`  icons-pro-max-${version}-plugin\\.zip\\n`));

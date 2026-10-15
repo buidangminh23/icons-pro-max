@@ -7,8 +7,8 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const manifests = ['plugin.json', '.claude-plugin/plugin.json', '.claude-plugin/marketplace.json', '.codex-plugin/plugin.json', 'gemini-extension.json'];
-const payload = ['plugin.json', 'assets', 'THIRD_PARTY_NOTICES.md', '.agents', '.claude-plugin', '.codex-plugin', 'skills', 'README.md', 'CONTRIBUTING.md', 'CHANGELOG.md', 'LICENSE', 'gemini-extension.json'];
-const portalPayload = ['plugin.json', 'assets', 'skills', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'README.md'];
+const payload = ['plugin.json', 'docs/assets', 'docs/THIRD_PARTY_NOTICES.md', '.agents', '.claude-plugin', '.codex-plugin', 'skills', 'README.md', '.github/CONTRIBUTING.md', 'CHANGELOG.md', 'LICENSE', 'gemini-extension.json'];
+const portalPayload = ['plugin.json', 'docs/assets', 'skills', 'LICENSE', 'docs/THIRD_PARTY_NOTICES.md', 'README.md', '.github/CONTRIBUTING.md'];
 const read = (file) => readFileSync(path.join(root, file), 'utf8');
 const json = (file) => JSON.parse(read(file));
 const git = (...args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();
@@ -117,7 +117,7 @@ function check(tag) {
     if (asset.endsWith('.svg')) assert.match(bytes.toString(), /<svg[\s>]/);
     else assert.equal(bytes.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
   }
-  const notices = read('THIRD_PARTY_NOTICES.md');
+  const notices = read('docs/THIRD_PARTY_NOTICES.md');
   for (const notice of ['Copyright (c) 2015 konpa', 'Copyright (c) 2023 LobeHub', 'CC0 1.0 Universal']) assert.ok(notices.includes(notice), `Missing upstream notice: ${notice}`);
   for (const file of ['skills/icons-pro-max/SKILL.md', 'plugin.json']) assert.ok(!/\b[A-Za-z]:[\\/]|\/Users\/|\/home\//.test(read(file)), `Machine-specific path in ${file}`);
   return version;

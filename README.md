@@ -93,7 +93,7 @@ Download a complete, versioned bundle from [GitHub Releases](https://github.com/
 ZIP or TAR.GZ, including the catalog, all assets, and plugin manifests. Verify it
 against the attached `SHA256SUMS` before extracting. The general release archives have a single
 `icons-pro-max-X.Y.Z/` root; preserve its hidden manifest directories when copying.
-See [release and verification instructions](CONTRIBUTING.md#release-rules).
+See [release and verification instructions](.github/CONTRIBUTING.md#release-rules).
 The separate `-plugin.zip` uses an unprefixed root for the submission portal.
 
 Pick your tool. Every block has a **copy button** (hover its top-right corner).
