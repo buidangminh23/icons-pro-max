@@ -6,10 +6,16 @@
 
 *One portable catalog — payment marks, QR guidance, social/app brand icons, the lucide UI set, 144 tech-stack logos, 86 full-color AI provider marks, and 516 Claude connector icons. Bundled assets, rendering recipes, sources, and an anti-slop checklist.*
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-0078D4?style=for-the-badge)](LICENSE)
-
-[![npm downloads](https://raw.githubusercontent.com/buidangminh23/icons-pro-max/npm-downloads/stats-npm-downloads.svg)](https://www.npmjs.com/package/@minhspark/icons-pro-max)
-[![npm downloads / 30d](https://raw.githubusercontent.com/buidangminh23/icons-pro-max/npm-downloads/stats-npm-downloads-month.svg)](https://www.npmjs.com/package/@minhspark/icons-pro-max)
+<p align="center">
+  <a href="https://www.npmjs.com/package/@minhspark/icons-pro-max"><img src="https://img.shields.io/npm/v/@minhspark/icons-pro-max?logo=npm&amp;color=CB3837" height="20" alt="npm" /></a>
+  <a href="https://www.npmjs.com/package/@minhspark/icons-pro-max"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/npm-downloads/stats-npm-downloads.svg" height="20" alt="npm downloads" /></a>
+  <a href="https://www.npmcharts.com/compare/%40minhspark%2Ficons-pro-max?minimal=true"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/npm-downloads/stats-npm-downloads-month.svg" height="20" alt="npm downloads / 30d" /></a>
+  <br />
+  <a href="https://github.com/buidangminh23/icons-pro-max/network/dependents"><img src="https://img.shields.io/librariesio/dependent-repos/npm/@minhspark/icons-pro-max?label=Used%20by&amp;logo=github&amp;color=0969da" height="20" alt="Used by repositories (Libraries.io)" /></a>
+  <a href="https://skills.sh/buidangminh23/icons-pro-max"><img src="https://skills.sh/b/buidangminh23/icons-pro-max?label=skills.sh" height="20" alt="skills.sh installs" /></a>
+  <a href="https://github.com/buidangminh23/icons-pro-max/graphs/traffic"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/badges/github-views.svg" height="20" alt="GitHub views / 14d" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/npm/l/@minhspark/icons-pro-max" height="20" alt="license" /></a>
+</p>
 
 [Latest release](https://github.com/buidangminh23/icons-pro-max/releases/latest) · [CI](https://github.com/buidangminh23/icons-pro-max/actions/workflows/ci.yml) · [npm package](https://www.npmjs.com/package/@minhspark/icons-pro-max)
 
