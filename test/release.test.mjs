@@ -135,7 +135,7 @@ test('archives preserve committed bytes with autocrlf and reject dirty builds', 
     const portal = zipFiles(readFileSync(path.join(fixture, `dist/icons-pro-max-${version}-plugin.zip`)));
     const expected = git('ls-tree', '-r', '--name-only', 'HEAD', '--', 'plugin.json', 'docs/assets', 'skills', 'LICENSE', 'docs/THIRD_PARTY_NOTICES.md', 'README.md', '.github/CONTRIBUTING.md').toString().trim().split('\n');
     assert.deepEqual([...portal.keys()].sort(), expected.sort());
-    assert.equal([...portal.keys()].filter((name) => name.startsWith('skills/icons-pro-max/assets/')).length, 799);
+    assert.equal([...portal.keys()].filter((name) => name.startsWith('skills/icons-pro-max/assets/')).length, 800);
     for (const [name, bytes] of portal) assert.deepEqual(bytes, git('show', `HEAD:${name}`), name);
     const fresh = path.join(fixture, 'dist', 'fresh-install');
     for (const [name, bytes] of portal) {

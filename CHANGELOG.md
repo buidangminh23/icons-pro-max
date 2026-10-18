@@ -4,6 +4,11 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [2.3.0] - 2026-10-18
+
+### Added
+- Add the official Tauri logo to the tech catalog with upstream provenance.
+
 ## [2.2.6] - 2026-10-15
 
 ### Changed
