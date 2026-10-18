@@ -4,7 +4,7 @@
 
 ### A Portable Icon System for AI Agents
 
-*One portable catalog — payment marks, QR guidance, social/app brand icons, the lucide UI set, 144 tech-stack logos, 86 full-color AI provider marks, and 516 Claude connector icons. Bundled assets, rendering recipes, sources, and an anti-slop checklist.*
+*One portable catalog — payment marks, QR guidance, social/app brand icons, the lucide UI set, 145 tech-stack logos, 86 full-color AI provider marks, and 516 Claude connector icons. Bundled assets, rendering recipes, sources, and an anti-slop checklist.*
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@minhspark/icons-pro-max"><img src="https://img.shields.io/npm/v/@minhspark/icons-pro-max?logo=npm&amp;color=CB3837" height="20" alt="npm" /></a>
@@ -285,7 +285,7 @@ Components: `VietQRLogo` · `VnpayLogo` · `ZaloPayLogo` · `MoMoLogo` · `VisaL
 
 In the web, GitHub/LinkedIn/Facebook/Telegram render as `currentColor` inline SVGs; Zalo and Gmail keep brand colors. Those six live in `src/SocialIcons.tsx` — import them, never re-inline. The other 22 are bundled marks ready for a new component. *(Bundled files carry the brand fill on a white tile for standalone display.)*
 
-### 🧰 Tech-stack logos — 144
+### 🧰 Tech-stack logos — 145
 
 <div align="center">
 <table>
@@ -468,6 +468,9 @@ In the web, GitHub/LinkedIn/Facebook/Telegram render as `currentColor` inline SV
 <td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/tech/xcode.svg" alt="Xcode" height="34"><br><sub>Xcode</sub></td>
 <td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/tech/yaml.svg" alt="YAML" height="34"><br><sub>YAML</sub></td>
 <td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/tech/yarn.svg" alt="Yarn" height="34"><br><sub>Yarn</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/tech/tauri.svg" alt="Tauri" height="34"><br><sub>Tauri</sub></td>
 </tr>
 </table>
 </div>
@@ -1380,7 +1383,7 @@ Generic action/status glyphs — the only freely-restylable icons (`currentColor
 - **§2 QR** — the dynamic VietQR `qrUrl()` recipe.
 - **§3 Social & app** — `currentColor` vs brand-color marks, single-source rule, 22 bundled-only marks.
 - **§4 UI (lucide)** — usage, the full in-use icon set, a11y.
-- **§5 Tech logos** — 144 official brand-colored SVGs, no recoloring.
+- **§5 Tech logos** — 145 official brand-colored SVGs, no recoloring.
 - **§6 Download badges** — 8 badges, Vietnamese and English.
 - **§7 AI providers** — 86 full-color marks, provider vs product rules.
 - **§8 Claude connectors** — 516 icons and the domain-verified selection order.

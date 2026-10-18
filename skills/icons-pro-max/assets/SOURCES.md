@@ -63,7 +63,7 @@ below identify provenance; they do not transfer brand ownership to the publisher
 | `youtube.svg` | YouTube | [Simple Icons](https://simpleicons.org) (CC0) |
 | `zalo.svg` | Zalo | [Simple Icons](https://simpleicons.org) (CC0) |
 
-## tech (144)
+## tech (145)
 
 | File | Brand | Source |
 |---|---|---|
@@ -192,6 +192,7 @@ below identify provenance; they do not transfer brand ownership to the publisher
 | `svelte.svg` | Svelte | [devicon](https://github.com/devicons/devicon) (MIT) |
 | `swift.svg` | Swift | [devicon](https://github.com/devicons/devicon) (MIT) |
 | `tailwindcss.svg` | Tailwind CSS | [devicon](https://github.com/devicons/devicon) (MIT) |
+| `tauri.svg` | Tauri | [Tauri `create-tauri-app` logo](https://github.com/tauri-apps/create-tauri-app/blob/16a754703baf0ca40fd4462dfc7674bc99bf3ef3/templates/_assets_/tauri.svg); [trademark policy](https://tauri.app/about/trademark/) |
 | `telethon.svg` | Telethon | [Telethon `logo.svg`](https://github.com/LonamiWebs/Telethon/blob/v1/logo.svg) |
 | `tensorflow.svg` | TensorFlow | [devicon](https://github.com/devicons/devicon) (MIT) |
 | `terraform.svg` | Terraform | [devicon](https://github.com/devicons/devicon) (MIT) |
