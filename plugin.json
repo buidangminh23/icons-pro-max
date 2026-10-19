@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "icons-pro-max",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Portable icon catalog and rendering guidance with bundled brand assets for AI agents.",
   "author": {
     "name": "buidangminh23",
