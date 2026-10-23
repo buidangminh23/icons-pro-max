@@ -25,171 +25,6 @@ Available on npm and GitHub Releases.
 
 ---
 
-## Release notifications
-
-To receive new release notifications, open [this repository](https://github.com/buidangminh23/icons-pro-max), select **Watch → Custom → Releases**, then click **Apply**. Choose GitHub or email delivery in your [notification settings](https://github.com/settings/notifications).
-
-Starring the repository or downloading/installing a package does not subscribe you to release notifications. Notifications do not update your installed copy; follow the installation instructions to update.
-
-[View release notes](https://github.com/buidangminh23/icons-pro-max/releases).
-
-## Why
-
-Icons are where AI-generated UI leaks: a re-traced logo that's *almost* right, a
-brand mark recolored to match a theme, a payment logo stretched out of ratio, a
-generic `credit-card` glyph standing in for Visa, or the same `ZaloIcon`
-copy-pasted into four files until they drift apart.
-
-`icons-pro-max` is the **single source of truth** for every icon the site ships.
-Find the icon here first, reuse its canonical component / asset path / size, and
-never redraw or recolor a brand mark. The one rule:
-
-> **An icon carries a brand's identity. Reproduce it exactly.**
-> Generic UI glyphs (lucide) are the only icons you may freely restyle.
-
----
-
-## Install
-
-#### ChatGPT Agent Plugin
-
-The release asset `icons-pro-max-X.Y.Z-plugin.zip` contains the portable
-`plugin.json` at its root, the skill, all bundled assets, listing artwork, and
-third-party notices. Check it against the release's `SHA256SUMS` before uploading.
-For author testing, open **Plugins → Upload new or existing plugin** using the
-intended publisher account and upload this ZIP as a skills-only package.
-
-This prepares a draft; public directory availability still requires a verified
-developer identity, review, and publication through the
-[OpenAI submission portal](https://developers.openai.com/plugins/deploy/submission).
-The GitHub release is not a public directory listing. No Sites hosting, MCP
-server, or account connection is required by this skill-only package.
-
-In Codex or the ChatGPT desktop app, the repository marketplace below provides
-local installation. Bundled asset paths are relative to the skill directory;
-application paths in the catalog are examples to adapt to the current project.
-
-#### GitHub Packages
-
-A repository-linked copy is available as `@buidangminh23/icons-pro-max` on
-[GitHub Packages](https://github.com/buidangminh23/icons-pro-max/packages).
-The npmjs.com package remains `@minhspark/icons-pro-max`.
-GitHub's npm registry requires authentication with a classic token with
-`read:packages` even for public packages. Authenticate locally, never commit a token:
-
-```bash
-npm login --scope=@buidangminh23 --registry=https://npm.pkg.github.com --auth-type=legacy
-npm install @buidangminh23/icons-pro-max --registry=https://npm.pkg.github.com
-```
-
-This downloads the bundle; use the agent-specific instructions below to register it.
-
-#### npm package
-
-```bash
-npm install @minhspark/icons-pro-max
-```
-
-This downloads the bundle to `node_modules/@minhspark/icons-pro-max`. It does not
-register the skill with an agent automatically; use the agent installers below
-or copy the bundled skill and assets to the appropriate agent directory.
-
-
-Download a complete, versioned bundle from [GitHub Releases](https://github.com/buidangminh23/icons-pro-max/releases/latest):
-ZIP or TAR.GZ, including the catalog, all assets, and plugin manifests. Verify it
-against the attached `SHA256SUMS` before extracting. The general release archives have a single
-`icons-pro-max-X.Y.Z/` root; preserve its hidden manifest directories when copying.
-See [release and verification instructions](.github/CONTRIBUTING.md#release-rules).
-The separate `-plugin.zip` uses an unprefixed root for the submission portal.
-
-Pick your tool. Every block has a **copy button** (hover its top-right corner).
-
-#### `npx` · skills
-
-```bash
-npx skills add buidangminh23/icons-pro-max
-```
-
-#### `npx` · add-skill
-
-```bash
-npx add-skill buidangminh23/icons-pro-max
-```
-
-#### Claude Code &nbsp;·&nbsp; native plugin (run inside Claude Code)
-
-```text
-/plugin marketplace add buidangminh23/icons-pro-max
-/plugin install icons-pro-max@icons-pro-max
-```
-
-#### Cursor
-
-```bash
-npx skills add buidangminh23/icons-pro-max -a cursor
-```
-
-#### Codex &nbsp;·&nbsp; native marketplace
-
-```text
-codex plugin marketplace add buidangminh23/icons-pro-max
-```
-
-#### Gemini CLI &nbsp;·&nbsp; native extension
-
-```bash
-gemini extensions install https://github.com/buidangminh23/icons-pro-max
-```
-
-#### Git submodule &nbsp;·&nbsp; vendor it into a repo (how the Personal Web wires it)
-
-```bash
-git submodule add https://github.com/buidangminh23/icons-pro-max.git .agents/skills/icons-pro-max
-git commit -m "chore: add icons-pro-max skill submodule"
-```
-
-**Works with:** Claude Code · Cursor · Codex · Gemini CLI.
-Skill name once loaded: **`icons-pro-max`** → then prompt *"Use the icons-pro-max skill."*
-
-<details>
-<summary><b>More options</b> — global flags, other agents (Cline, opencode…), manual install</summary>
-
-The `skills` CLI targets any agent with `-a` and installs to the user directory with `-g`:
-
-| Tool | Command |
-|---|---|
-| Claude Code | `npx skills add buidangminh23/icons-pro-max -a claude-code -g` |
-| Codex | `npx skills add buidangminh23/icons-pro-max -a codex -g` |
-| Cursor | `npx skills add buidangminh23/icons-pro-max -a cursor -g` |
-| Cline | `npx skills add buidangminh23/icons-pro-max -a cline -g` |
-| opencode | `npx skills add buidangminh23/icons-pro-max -a opencode -g` |
-| Several at once | `npx skills add buidangminh23/icons-pro-max -a claude-code -a cursor -a codex` |
-
-Drop `-g` for a project-local install. Manage with `npx skills list`, `npx skills update`, `npx skills remove`.
-
-**Manual (portable)** — fetch the catalog once, then place it where your agent looks:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/SKILL.md -o SKILL.md
-```
-
-Clone the whole skill (catalog + bundled SVG/PNG assets):
-
-```bash
-git clone https://github.com/buidangminh23/icons-pro-max.git
-```
-
-| Tool | Where it goes |
-|---|---|
-| Claude Code | `~/.claude/skills/icons-pro-max/SKILL.md` (global) or `.claude/skills/…` (project) |
-| Codex | save in repo, then reference from `AGENTS.md` |
-| Cursor | rename to `.cursor/rules/icons-pro-max.mdc` |
-| Cline / opencode / others | drop into the agent's skills/rules folder, or paste `SKILL.md` as context |
-
-</details>
-
----
-
 ## The complete icon catalog
 
 Seven galleries below — **QR** is recipe-only (SKILL.md §2) and
@@ -1371,6 +1206,171 @@ Generic action/status glyphs — the only freely-restylable icons (`currentColor
 </div>
 
 <sub>Preview files live in [`docs/lucide/`](docs/lucide/) (ISC license, © Lucide Icons and Contributors) and are not part of the skill or the npm package.</sub>
+
+---
+
+## Release notifications
+
+To receive new release notifications, open [this repository](https://github.com/buidangminh23/icons-pro-max), select **Watch → Custom → Releases**, then click **Apply**. Choose GitHub or email delivery in your [notification settings](https://github.com/settings/notifications).
+
+Starring the repository or downloading/installing a package does not subscribe you to release notifications. Notifications do not update your installed copy; follow the installation instructions to update.
+
+[View release notes](https://github.com/buidangminh23/icons-pro-max/releases).
+
+## Why
+
+Icons are where AI-generated UI leaks: a re-traced logo that's *almost* right, a
+brand mark recolored to match a theme, a payment logo stretched out of ratio, a
+generic `credit-card` glyph standing in for Visa, or the same `ZaloIcon`
+copy-pasted into four files until they drift apart.
+
+`icons-pro-max` is the **single source of truth** for every icon the site ships.
+Find the icon here first, reuse its canonical component / asset path / size, and
+never redraw or recolor a brand mark. The one rule:
+
+> **An icon carries a brand's identity. Reproduce it exactly.**
+> Generic UI glyphs (lucide) are the only icons you may freely restyle.
+
+---
+
+## Install
+
+#### ChatGPT Agent Plugin
+
+The release asset `icons-pro-max-X.Y.Z-plugin.zip` contains the portable
+`plugin.json` at its root, the skill, all bundled assets, listing artwork, and
+third-party notices. Check it against the release's `SHA256SUMS` before uploading.
+For author testing, open **Plugins → Upload new or existing plugin** using the
+intended publisher account and upload this ZIP as a skills-only package.
+
+This prepares a draft; public directory availability still requires a verified
+developer identity, review, and publication through the
+[OpenAI submission portal](https://developers.openai.com/plugins/deploy/submission).
+The GitHub release is not a public directory listing. No Sites hosting, MCP
+server, or account connection is required by this skill-only package.
+
+In Codex or the ChatGPT desktop app, the repository marketplace below provides
+local installation. Bundled asset paths are relative to the skill directory;
+application paths in the catalog are examples to adapt to the current project.
+
+#### GitHub Packages
+
+A repository-linked copy is available as `@buidangminh23/icons-pro-max` on
+[GitHub Packages](https://github.com/buidangminh23/icons-pro-max/packages).
+The npmjs.com package remains `@minhspark/icons-pro-max`.
+GitHub's npm registry requires authentication with a classic token with
+`read:packages` even for public packages. Authenticate locally, never commit a token:
+
+```bash
+npm login --scope=@buidangminh23 --registry=https://npm.pkg.github.com --auth-type=legacy
+npm install @buidangminh23/icons-pro-max --registry=https://npm.pkg.github.com
+```
+
+This downloads the bundle; use the agent-specific instructions below to register it.
+
+#### npm package
+
+```bash
+npm install @minhspark/icons-pro-max
+```
+
+This downloads the bundle to `node_modules/@minhspark/icons-pro-max`. It does not
+register the skill with an agent automatically; use the agent installers below
+or copy the bundled skill and assets to the appropriate agent directory.
+
+
+Download a complete, versioned bundle from [GitHub Releases](https://github.com/buidangminh23/icons-pro-max/releases/latest):
+ZIP or TAR.GZ, including the catalog, all assets, and plugin manifests. Verify it
+against the attached `SHA256SUMS` before extracting. The general release archives have a single
+`icons-pro-max-X.Y.Z/` root; preserve its hidden manifest directories when copying.
+See [release and verification instructions](.github/CONTRIBUTING.md#release-rules).
+The separate `-plugin.zip` uses an unprefixed root for the submission portal.
+
+Pick your tool. Every block has a **copy button** (hover its top-right corner).
+
+#### `npx` · skills
+
+```bash
+npx skills add buidangminh23/icons-pro-max
+```
+
+#### `npx` · add-skill
+
+```bash
+npx add-skill buidangminh23/icons-pro-max
+```
+
+#### Claude Code &nbsp;·&nbsp; native plugin (run inside Claude Code)
+
+```text
+/plugin marketplace add buidangminh23/icons-pro-max
+/plugin install icons-pro-max@icons-pro-max
+```
+
+#### Cursor
+
+```bash
+npx skills add buidangminh23/icons-pro-max -a cursor
+```
+
+#### Codex &nbsp;·&nbsp; native marketplace
+
+```text
+codex plugin marketplace add buidangminh23/icons-pro-max
+```
+
+#### Gemini CLI &nbsp;·&nbsp; native extension
+
+```bash
+gemini extensions install https://github.com/buidangminh23/icons-pro-max
+```
+
+#### Git submodule &nbsp;·&nbsp; vendor it into a repo (how the Personal Web wires it)
+
+```bash
+git submodule add https://github.com/buidangminh23/icons-pro-max.git .agents/skills/icons-pro-max
+git commit -m "chore: add icons-pro-max skill submodule"
+```
+
+**Works with:** Claude Code · Cursor · Codex · Gemini CLI.
+Skill name once loaded: **`icons-pro-max`** → then prompt *"Use the icons-pro-max skill."*
+
+<details>
+<summary><b>More options</b> — global flags, other agents (Cline, opencode…), manual install</summary>
+
+The `skills` CLI targets any agent with `-a` and installs to the user directory with `-g`:
+
+| Tool | Command |
+|---|---|
+| Claude Code | `npx skills add buidangminh23/icons-pro-max -a claude-code -g` |
+| Codex | `npx skills add buidangminh23/icons-pro-max -a codex -g` |
+| Cursor | `npx skills add buidangminh23/icons-pro-max -a cursor -g` |
+| Cline | `npx skills add buidangminh23/icons-pro-max -a cline -g` |
+| opencode | `npx skills add buidangminh23/icons-pro-max -a opencode -g` |
+| Several at once | `npx skills add buidangminh23/icons-pro-max -a claude-code -a cursor -a codex` |
+
+Drop `-g` for a project-local install. Manage with `npx skills list`, `npx skills update`, `npx skills remove`.
+
+**Manual (portable)** — fetch the catalog once, then place it where your agent looks:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/SKILL.md -o SKILL.md
+```
+
+Clone the whole skill (catalog + bundled SVG/PNG assets):
+
+```bash
+git clone https://github.com/buidangminh23/icons-pro-max.git
+```
+
+| Tool | Where it goes |
+|---|---|
+| Claude Code | `~/.claude/skills/icons-pro-max/SKILL.md` (global) or `.claude/skills/…` (project) |
+| Codex | save in repo, then reference from `AGENTS.md` |
+| Cursor | rename to `.cursor/rules/icons-pro-max.mdc` |
+| Cline / opencode / others | drop into the agent's skills/rules folder, or paste `SKILL.md` as context |
+
+</details>
 
 ---
 
