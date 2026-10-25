@@ -72,7 +72,7 @@ Brand payment marks. Rendered through the shared **badge wrapper** in `src/Payme
 | MoMo | `MoMoLogo` | `/payment/momo.svg` | `assets/payment/momo.svg` | **18px** | square mark → tallest |
 | Visa | `VisaLogo` | `/payment/visa.svg` | `assets/payment/visa.svg` | **12px** | card network |
 | Mastercard | `MastercardLogo` | `/payment/mastercard.svg` | `assets/payment/mastercard.svg` | **17px** | card network |
-| PayPal | `PayPalLogo` | `/payment/paypal.svg` | `assets/payment/paypal-wordmark.svg` | **16px** | official [PayPal wordmark](https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg), native black |
+| PayPal | `PayPalLogo` | `/payment/paypal.svg` | `assets/payment/paypal-wordmark.svg` | **16px** | official [PayPal full-color horizontal logo](https://www.paypalobjects.com/digitalassets/c/website/logo/full-text/pp_fc_hl.svg), original blue colors |
 
 Extra marks in `assets/payment/` (not wired into the badge set, no tuned height yet): `paypal` · `stripe` · `applepay` · `googlepay` · `americanexpress` · `jcb` · `shopee` · `grab` · `zalo`, plus `zalo-icon.png`. Each carries its own white padded chip. Before shipping one on the web, add a `…Logo` component with a tuned height (§1.B) and move it into the table above.
 
