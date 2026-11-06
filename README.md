@@ -4,7 +4,7 @@
 
 ### A Portable Icon System for AI Agents
 
-*One portable catalog — payment marks, QR guidance, social/app brand icons, the lucide UI set, 145 tech-stack logos, 86 full-color AI provider marks, and 516 Claude connector icons. Bundled assets, rendering recipes, sources, and an anti-slop checklist.*
+*One portable catalog — payment marks, QR guidance, social/app brand icons, the lucide UI set, 145 tech-stack logos, 86 full-color AI provider marks, 516 Claude connector icons, and 25 Microsoft app logos. Bundled assets, rendering recipes, sources, and an anti-slop checklist.*
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@minhspark/icons-pro-max"><img src="https://img.shields.io/npm/v/@minhspark/icons-pro-max?logo=npm&amp;color=CB3837" height="20" alt="npm" /></a>
@@ -27,8 +27,8 @@ Available on npm and GitHub Releases.
 
 ## The complete icon catalog
 
-Seven galleries below — **QR** is recipe-only (SKILL.md §2) and
-bundles no marks. Every payment, social, tech, badge, AI, and connector mark shown is a
+Eight galleries below — **QR** is recipe-only (SKILL.md §2) and
+bundles no marks. Every payment, social, tech, badge, AI, connector, and Microsoft mark shown is a
 **real asset bundled in this repo**
 ([`skills/icons-pro-max/assets/`](skills/icons-pro-max/assets/)), and
 [`SOURCES.md`](skills/icons-pro-max/assets/SOURCES.md) records where each one comes from
@@ -1110,6 +1110,50 @@ The services in the Claude connector directory — Google Drive, Gmail, Google C
 
 Vector marks where the brand has one (matched by official domain, not by name), otherwise the icon the connector directory serves. See [`SOURCES.md`](skills/icons-pro-max/assets/SOURCES.md).
 
+### 🪟 Microsoft 365 apps — 25
+
+Official full-color product icons from Microsoft, also the right mark for a `.docx`, `.xlsx`, or `.pptx` file row.
+
+<div align="center">
+<table>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/access.svg" alt="Microsoft Access" height="34"><br><sub>Access</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/copilot.svg" alt="Microsoft 365 Copilot" height="34"><br><sub>365 Copilot</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/excel.svg" alt="Microsoft Excel" height="34"><br><sub>Excel</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/forms.svg" alt="Microsoft Forms" height="34"><br><sub>Forms</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/infopath.svg" alt="Microsoft InfoPath" height="34"><br><sub>InfoPath</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/lists.svg" alt="Microsoft Lists" height="34"><br><sub>Lists</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/loop.svg" alt="Microsoft Loop" height="34"><br><sub>Loop</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/m365.svg" alt="Microsoft 365" height="34"><br><sub>365</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/office.svg" alt="Microsoft Office" height="34"><br><sub>Office</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/onedrive.svg" alt="Microsoft OneDrive" height="34"><br><sub>OneDrive</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/onenote.svg" alt="Microsoft OneNote" height="34"><br><sub>OneNote</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/outlook.svg" alt="Microsoft Outlook" height="34"><br><sub>Outlook</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/powerbi.svg" alt="Microsoft Power BI" height="34"><br><sub>Power BI</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/powerpoint.svg" alt="Microsoft PowerPoint" height="34"><br><sub>PowerPoint</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/project.svg" alt="Microsoft Project" height="34"><br><sub>Project</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/publisher.svg" alt="Microsoft Publisher" height="34"><br><sub>Publisher</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/sharepoint.svg" alt="Microsoft SharePoint" height="34"><br><sub>SharePoint</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/stream.svg" alt="Microsoft Stream" height="34"><br><sub>Stream</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/sway.svg" alt="Microsoft Sway" height="34"><br><sub>Sway</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/teams.svg" alt="Microsoft Teams" height="34"><br><sub>Teams</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/todo.svg" alt="Microsoft To Do" height="34"><br><sub>To Do</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/visio.svg" alt="Microsoft Visio" height="34"><br><sub>Visio</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/vivaengage.svg" alt="Viva Engage" height="34"><br><sub>Viva Engage</sub></td>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/word.svg" alt="Microsoft Word" height="34"><br><sub>Word</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/buidangminh23/icons-pro-max/main/skills/icons-pro-max/assets/microsoft/yammer.svg" alt="Yammer" height="34"><br><sub>Yammer</sub></td>
+</tr>
+</table>
+</div>
+
 ### 🎛️ UI icons — lucide-react (68 in use)
 
 Generic action/status glyphs — the only freely-restylable icons (`currentColor`, sized by class). They come from the [lucide-react](https://lucide.dev) package, so the skill bundles no files for them. The previews below are the official [lucide-static](https://www.npmjs.com/package/lucide-static) SVGs, each tinted with an accent color that hints at its meaning (mid-tone shades that read in light and dark mode); in the web they inherit the text color. Reuse one before importing a new name:
@@ -1387,6 +1431,7 @@ git clone https://github.com/buidangminh23/icons-pro-max.git
 - **§6 Download badges** — 8 badges, Vietnamese and English.
 - **§7 AI providers** — 86 full-color marks, provider vs product rules.
 - **§8 Claude connectors** — 516 icons and the domain-verified selection order.
+- **§8.A Microsoft 365 apps** — 25 official product icons, including the Office file-type marks.
 - **§9 Anti-slop checklist** — 10 tells (re-drawn logo, look-alike stand-in, recolored mark, distorted ratio, wrong-meaning glyph, re-inlined duplicate…) each with the fix.
 - **§10 Add-an-icon procedure** — classify → drop asset → record its source → wire render → update catalog → a11y → verify.
 
