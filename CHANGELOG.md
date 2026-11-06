@@ -4,6 +4,15 @@ All notable changes to Icons Pro Max are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 [SemVer](https://semver.org/).
 
+## [2.4.0] - 2026-11-06
+
+### Added
+- Add a Microsoft apps group with 25 official product icons, including Word, Excel, PowerPoint, Outlook, OneDrive, and Teams, sourced byte-for-byte from Microsoft's icon CDN. Use these for Office file rows.
+- Add the official full-color PayPal wordmark to the payment catalog.
+
+### Fixed
+- Correct the release test's asset count, which had failed CI since the PayPal wordmark was added.
+
 ## [2.3.0] - 2026-10-18
 
 ### Added
